@@ -1,8 +1,8 @@
-import {IContextMenu} from '@rign/angular2-tree';
-import {Injectable, Inject} from '@angular/core';
-import {IFileTypeFilter} from '../toolbar/interface/IFileTypeFilter';
-import {ICropSize} from '../crop/ICropSize';
-import {IFileManagerConfiguration} from './IFileManagerConfiguration';
+import { IContextMenu } from '@rign/angular2-tree';
+import { Injectable, Inject } from '@angular/core';
+import { IFileTypeFilter } from '../toolbar/interface/IFileTypeFilter';
+import { ICropSize } from '../crop/ICropSize';
+import { IFileManagerConfiguration } from './IFileManagerConfiguration';
 
 @Injectable()
 export class FileManagerConfiguration {
@@ -56,7 +56,7 @@ export class FileManagerConfiguration {
     }
   ];
 
-  public folderUrls: {foldersUrl: string, folderMoveUrl: string};
+  public folderUrls: { foldersUrl: string, folderMoveUrl: string };
   public fileUrl = '/api/files';
 
   public isMultiSelection: boolean;
@@ -68,8 +68,8 @@ export class FileManagerConfiguration {
   public allowChooseMultipleFiles: boolean;
 
   constructor(@Inject('fileManagerConfiguration') configuration: IFileManagerConfiguration) {
-    const {foldersUrl, folderMoveUrl} = configuration.urls;
-    this.folderUrls = {foldersUrl, folderMoveUrl};
+    const { foldersUrl, folderMoveUrl } = configuration.urls;
+    this.folderUrls = { foldersUrl, folderMoveUrl };
     this.fileUrl = configuration.urls.filesUrl;
     this.isMultiSelection = configuration.isMultiSelection || false;
     this.maxFileSize = configuration.maxFileSize || 0;

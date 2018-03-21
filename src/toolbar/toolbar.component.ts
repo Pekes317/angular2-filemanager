@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Output, Input, OnChanges} from '@angular/core';
-import {Button} from './models/button.model';
-import {ToolbarEventModel} from './models/toolbarEvent.model';
-import {IToolbarEvent} from './interface/IToolbarEvent';
-import {FileManagerConfiguration} from '../configuration/fileManagerConfiguration.service';
-import {FileManagerUploader} from '../filesList/fileManagerUploader.service';
-import {FileManagerDispatcherService} from '../store/fileManagerDispatcher.service';
+import { Component, EventEmitter, Output, Input, OnChanges } from '@angular/core';
+import { Button } from './models/button.model';
+import { ToolbarEventModel } from './models/toolbarEvent.model';
+import { IToolbarEvent } from './interface/IToolbarEvent';
+import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
+import { FileManagerUploader } from '../filesList/fileManagerUploader.service';
+import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.service';
 
 @Component({
   selector: 'ri-toolbar',

@@ -1,4 +1,4 @@
-import {Subject} from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 
 export interface INotification {
   type: 'alert' | 'error' | 'success';

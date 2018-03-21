@@ -2,14 +2,14 @@ import {
   Component, Input, ViewChild, ViewContainerRef, ComponentFactoryResolver, Output,
   EventEmitter, AfterContentInit
 } from '@angular/core';
-import {FileModel} from '../filesList/file.model';
-import {CropperSettings} from 'ng2-img-cropper/src/cropperSettings';
-import {ICropSize} from './ICropSize';
-import {FileManagerConfiguration} from '../configuration/fileManagerConfiguration.service';
-import {Bounds} from 'ng2-img-cropper/src/model/bounds';
-import {ICropBounds} from './ICropBounds';
-import {FileManagerDispatcherService} from '../store/fileManagerDispatcher.service';
-import {ImageCropperComponent} from 'ng2-img-cropper';
+import { FileModel } from '../filesList/file.model';
+import { CropperSettings } from 'ng2-img-cropper/src/cropperSettings';
+import { ICropSize } from './ICropSize';
+import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
+import { Bounds } from 'ng2-img-cropper/src/model/bounds';
+import { ICropBounds } from './ICropBounds';
+import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.service';
+import { ImageCropperComponent } from 'ng2-img-cropper';
 
 @Component({
   selector: 'crop-image',
@@ -41,7 +41,7 @@ export class CropComponent implements AfterContentInit {
 
   @Output() onCrop = new EventEmitter();
 
-  @ViewChild('container', {read: ViewContainerRef})
+  @ViewChild('container', { read: ViewContainerRef })
   public container: ViewContainerRef;
 
   @ViewChild('cropper')
@@ -53,8 +53,8 @@ export class CropComponent implements AfterContentInit {
   public currentCropSize: ICropSize;
 
   constructor(private resolver: ComponentFactoryResolver,
-              private configuration: FileManagerConfiguration,
-              private fileManagerDispatcher: FileManagerDispatcherService) {
+    private configuration: FileManagerConfiguration,
+    private fileManagerDispatcher: FileManagerDispatcherService) {
     this.cropSizeList = configuration.allowedCropSize;
   }
 

@@ -1,16 +1,16 @@
-import {SelectionComponent} from './selection.component';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {DebugElement} from '@angular/core';
-import {ButtonClass} from '../../dropdown/Button.class';
-import {Button} from '../models/button.model';
-import {ButtonDividerClass} from '../../dropdown/ButtonDivider.class';
-import {CurrentDirectoryFilesService} from '../../services/currentDirectoryFiles.service';
-import {Observable} from 'rxjs/Observable';
-import {DropdownComponent} from '../../dropdown/dropdown.component';
-import {FileManagerConfiguration} from '../../configuration/fileManagerConfiguration.service';
-import {filesData} from '../../../_unitTestMocks/fileDataMock';
-import {ToolbarEventModel} from '../models/toolbarEvent.model';
-import {TranslateModule} from 'ng2-translate';
+import { SelectionComponent } from './selection.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { ButtonClass } from '../../dropdown/Button.class';
+import { Button } from '../models/button.model';
+import { ButtonDividerClass } from '../../dropdown/ButtonDivider.class';
+import { CurrentDirectoryFilesService } from '../../services/currentDirectoryFiles.service';
+import { Observable } from 'rxjs/Observable';
+import { DropdownComponent } from '../../dropdown/dropdown.component';
+import { FileManagerConfiguration } from '../../configuration/fileManagerConfiguration.service';
+import { filesData } from '../../../_unitTestMocks/fileDataMock';
+import { ToolbarEventModel } from '../models/toolbarEvent.model';
+import { TranslateModule } from 'ng2-translate';
 
 describe('selection.component', () => {
   let comp: SelectionComponent
@@ -68,8 +68,8 @@ describe('selection.component', () => {
       imports: [TranslateModule.forRoot()],
       declarations: [SelectionComponent, DropdownComponent],
       providers: [
-        {provide: CurrentDirectoryFilesService, useValue: currentDirectoryFilesServiceStub},
-        {provide: FileManagerConfiguration, useValue: fileManagerConfigurationStub}
+        { provide: CurrentDirectoryFilesService, useValue: currentDirectoryFilesServiceStub },
+        { provide: FileManagerConfiguration, useValue: fileManagerConfigurationStub }
       ]
     });
 

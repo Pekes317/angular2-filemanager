@@ -1,7 +1,7 @@
-import {Observable} from 'rxjs/Observable';
-import {IOuterNode} from '@rign/angular2-tree';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {ICropBounds} from '../crop/ICropBounds';
+import { Observable } from 'rxjs/Observable';
+import { IOuterNode } from '@rign/angular2-tree';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { ICropBounds } from '../crop/ICropBounds';
 
 
 export interface IFileManagerApi {

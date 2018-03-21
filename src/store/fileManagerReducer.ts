@@ -1,6 +1,6 @@
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {FileManagerActionsService, IFileManagerAction} from './fileManagerActions.service';
-import {createFeatureSelector, MemoizedSelector} from '@ngrx/store';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { FileManagerActionsService, IFileManagerAction } from './fileManagerActions.service';
+import { createFeatureSelector, MemoizedSelector } from '@ngrx/store';
 
 export type storeEntities = { [key: string]: IOuterFile };
 

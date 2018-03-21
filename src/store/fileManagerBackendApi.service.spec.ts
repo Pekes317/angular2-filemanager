@@ -1,14 +1,14 @@
-import {Http, Response, ResponseOptions, URLSearchParams} from '@angular/http';
-import {FileManagerConfiguration} from '../configuration/fileManagerConfiguration.service';
-import {FileManagerBackendApiService} from './fileManagerBackendApi.service';
-import {rootNode} from '../../_unitTestMocks/folderDataMock';
-import {Observable} from 'rxjs/Observable';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {filesData} from '../../_unitTestMocks/fileDataMock';
-import {IOuterNode} from '@rign/angular2-tree';
-import {Subscription} from 'rxjs/Subscription';
-import {ICropBounds} from '../crop/ICropBounds';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import { Http, Response, ResponseOptions, URLSearchParams } from '@angular/http';
+import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
+import { FileManagerBackendApiService } from './fileManagerBackendApi.service';
+import { rootNode } from '../../_unitTestMocks/folderDataMock';
+import { Observable } from 'rxjs/Observable';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { filesData } from '../../_unitTestMocks/fileDataMock';
+import { IOuterNode } from '@rign/angular2-tree';
+import { Subscription } from 'rxjs/Subscription';
+import { ICropBounds } from '../crop/ICropBounds';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 describe('fileManagerBackendApi.service', () => {
   let service: FileManagerBackendApiService;
@@ -217,7 +217,7 @@ describe('fileManagerBackendApi.service', () => {
     });
 
     it('should create proper $http request', () => {
-      expect(httpMock.delete).toHaveBeenCalledWith(configuration.folderUrls.foldersUrl, {params});
+      expect(httpMock.delete).toHaveBeenCalledWith(configuration.folderUrls.foldersUrl, { params });
     });
 
     it('should return new value of updated node', () => {
@@ -246,7 +246,7 @@ describe('fileManagerBackendApi.service', () => {
     });
 
     it('should make proper $http request', () => {
-      expect(httpMock.put).toHaveBeenCalledWith(configuration.fileUrl, {id: file.id, bounds: bounds});
+      expect(httpMock.put).toHaveBeenCalledWith(configuration.fileUrl, { id: file.id, bounds: bounds });
     });
 
     it('should return proper value', () => {
@@ -275,7 +275,7 @@ describe('fileManagerBackendApi.service', () => {
     });
 
     it('should httpMock.get call with proper params', () => {
-      expect(httpMock.get).toHaveBeenCalledWith(configuration.fileUrl, {params});
+      expect(httpMock.get).toHaveBeenCalledWith(configuration.fileUrl, { params });
     });
   });
 
@@ -303,7 +303,7 @@ describe('fileManagerBackendApi.service', () => {
     });
 
     it('should httpMock.delete has to be called with proper params', () => {
-      expect(httpMock.delete).toHaveBeenCalledWith(configuration.fileUrl, {params});
+      expect(httpMock.delete).toHaveBeenCalledWith(configuration.fileUrl, { params });
     });
   });
 

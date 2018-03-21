@@ -1,6 +1,6 @@
-import {Component, Input, OnChanges, HostListener} from '@angular/core';
-import {IFileModel} from '../filesList/interface/IFileModel';
-import {FileModel} from '../filesList/file.model';
+import { Component, Input, OnChanges, HostListener } from '@angular/core';
+import { IFileModel } from '../filesList/interface/IFileModel';
+import { FileModel } from '../filesList/file.model';
 
 @Component({
   selector: 'ri-file-preview',

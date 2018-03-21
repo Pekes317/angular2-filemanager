@@ -1,5 +1,5 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {IButtonData} from './IButton';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { IButtonData } from './IButton';
 
 @Component({
   selector: 'ri-dropdown',

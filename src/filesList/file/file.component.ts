@@ -1,8 +1,8 @@
-import {Component, EventEmitter, Input, OnChanges, Output, ViewEncapsulation} from '@angular/core';
-import {IFileModel} from '../interface/IFileModel';
-import {FileManagerConfiguration} from '../../configuration/fileManagerConfiguration.service';
-import {IFileEvent} from '../interface/IFileEvent';
-import {FileManagerDispatcherService} from '../../store/fileManagerDispatcher.service';
+import { Component, EventEmitter, Input, OnChanges, Output, ViewEncapsulation } from '@angular/core';
+import { IFileModel } from '../interface/IFileModel';
+import { FileManagerConfiguration } from '../../configuration/fileManagerConfiguration.service';
+import { IFileEvent } from '../interface/IFileEvent';
+import { FileManagerDispatcherService } from '../../store/fileManagerDispatcher.service';
 
 @Component({
   selector: 'ri-file-component',
@@ -19,7 +19,7 @@ export class FileComponent {
   public removeTitle = 'Remove file';
 
   public constructor(public configuration: FileManagerConfiguration,
-                     private fileManagerDispatcher: FileManagerDispatcherService) {
+    private fileManagerDispatcher: FileManagerDispatcherService) {
   }
 
   /**

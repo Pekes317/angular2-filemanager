@@ -1,9 +1,9 @@
-import {FilemanagerNotifcations} from '../services/FilemanagerNotifcations';
-import {FileManagerApiService} from './fileManagerApi.service';
-import {IOuterNode} from '@rign/angular2-tree';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {filesData} from '../../_unitTestMocks/fileDataMock';
-import {UUID} from 'angular2-uuid';
+import { FilemanagerNotifcations } from '../services/FilemanagerNotifcations';
+import { FileManagerApiService } from './fileManagerApi.service';
+import { IOuterNode } from '@rign/angular2-tree';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { filesData } from '../../_unitTestMocks/fileDataMock';
+import { UUID } from 'angular2-uuid';
 
 describe('fileManagerApi.service', () => {
   let service: FileManagerApiService;
@@ -198,7 +198,7 @@ describe('fileManagerApi.service', () => {
   describe('cropFile', () => {
     it('should throw error', () => {
 
-      service.cropFile(filesData[0], {x: 1, y: 2, width: 3, height: 4})
+      service.cropFile(filesData[0], { x: 1, y: 2, width: 3, height: 4 })
         .subscribe(() => {
         }, handler);
 
@@ -318,8 +318,8 @@ describe('fileManagerApi.service', () => {
       service.loadFiles('');
       service.add(newNode, rootNode.id);
 
-      const newAddedNode = Object.assign({}, newNode, {id: newNodeId});
-      const movedFile = Object.assign({}, file, {folderId: newNodeId});
+      const newAddedNode = Object.assign({}, newNode, { id: newNodeId });
+      const movedFile = Object.assign({}, file, { folderId: newNodeId });
 
       service.moveFile([file], newAddedNode)
         .subscribe(handler);

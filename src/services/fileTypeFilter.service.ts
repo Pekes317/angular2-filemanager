@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {IFileTypeFilter} from '../toolbar/interface/IFileTypeFilter';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { IFileTypeFilter } from '../toolbar/interface/IFileTypeFilter';
 
 @Injectable()
 export class FileTypeFilterService {

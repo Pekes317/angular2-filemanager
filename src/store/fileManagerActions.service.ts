@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Action} from '@ngrx/store';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {IFileModel} from '../filesList/interface/IFileModel';
-import {ICropBounds} from '../crop/ICropBounds';
+import { Injectable } from '@angular/core';
+import { Action } from '@ngrx/store';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { IFileModel } from '../filesList/interface/IFileModel';
+import { ICropBounds } from '../crop/ICropBounds';
 
 export interface IFileManagerPayloadData {
   folderId?: string;
@@ -42,7 +42,7 @@ export class FileManagerActionsService {
   public chooseFiles(files: IOuterFile[]): IFileManagerAction {
     return {
       type: FileManagerActionsService.FILEMANAGER_CHOOSE_FILES,
-      payload: {files}
+      payload: { files }
     };
   }
 
@@ -95,14 +95,14 @@ export class FileManagerActionsService {
   public deleteSelectedFiles(fileIds: string[]): IFileManagerAction {
     return {
       type: FileManagerActionsService.FILEMANAGER_DELETE_FILE_SELECTION,
-      payload: {fileIds}
+      payload: { fileIds }
     };
   }
 
   public deleteSelectedFilesSuccess(files: IOuterFile[]): IFileManagerAction {
     return {
       type: FileManagerActionsService.FILEMANAGER_DELETE_FILE_SELECTION_SUCCESS,
-      payload: {files}
+      payload: { files }
     };
   }
 
@@ -135,14 +135,14 @@ export class FileManagerActionsService {
   public moveFileSuccess(files: IOuterFile[], folderId: string) {
     return {
       type: FileManagerActionsService.FILEMANAGER_MOVE_FILES_SUCCESS,
-      payload: {folderId, files}
+      payload: { folderId, files }
     };
   }
 
   public moveFileError(files: IOuterFile[]): IFileManagerAction {
     return {
       type: FileManagerActionsService.FILEMANAGER_MOVE_FILES_ERROR,
-      payload: {files}
+      payload: { files }
     };
   }
 

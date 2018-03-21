@@ -1,4 +1,4 @@
-import {AbstractButtonClass} from './AbstractButton.class';
+import { AbstractButtonClass } from './AbstractButton.class';
 
 export class ButtonDividerClass extends AbstractButtonClass {
   public constructor() {

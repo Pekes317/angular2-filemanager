@@ -1,12 +1,12 @@
-import {CurrentDirectoryFilesService} from './currentDirectoryFiles.service';
-import {MockStore} from '../../_unitTestMocks/storeMock';
-import {FileTypeFilterService} from './fileTypeFilter.service';
-import {SearchFilterService} from './searchFilter.service';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {filesData, filesDataModels, state} from '../../_unitTestMocks/fileDataMock';
-import {Observable} from 'rxjs/Observable';
-import {IFileManagerState} from '../store/fileManagerReducer';
+import { CurrentDirectoryFilesService } from './currentDirectoryFiles.service';
+import { MockStore } from '../../_unitTestMocks/storeMock';
+import { FileTypeFilterService } from './fileTypeFilter.service';
+import { SearchFilterService } from './searchFilter.service';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { filesData, filesDataModels, state } from '../../_unitTestMocks/fileDataMock';
+import { Observable } from 'rxjs/Observable';
+import { IFileManagerState } from '../store/fileManagerReducer';
 
 describe('CurrentDirectoryFilesService', () => {
   let service: CurrentDirectoryFilesService;
@@ -84,7 +84,7 @@ describe('CurrentDirectoryFilesService', () => {
     it('should return BANER2.png if filter type stream is set to image/png', () => {
       const expectedValue = [filesDataModels[0]];
 
-      fileTypeFilterMock.filter$.next({name: '', mimes: ['image/png'], iconCls: '', defaultSelected: false});
+      fileTypeFilterMock.filter$.next({ name: '', mimes: ['image/png'], iconCls: '', defaultSelected: false });
 
       service.filteredFiles$
         .subscribe(handler);

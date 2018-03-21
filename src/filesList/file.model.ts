@@ -1,6 +1,6 @@
-import {IOuterFile} from './interface/IOuterFile';
-import {IFileModel} from './interface/IFileModel';
-import {ISelectFile} from './interface/ISelectFile';
+import { IOuterFile } from './interface/IOuterFile';
+import { IFileModel } from './interface/IFileModel';
+import { ISelectFile } from './interface/ISelectFile';
 
 export class FileModel implements IFileModel {
   static smallIconsFolder = '/icons/128px/';

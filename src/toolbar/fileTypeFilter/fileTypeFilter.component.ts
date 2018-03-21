@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {IFileTypeFilter} from '../interface/IFileTypeFilter';
-import {FileTypeFilterService} from '../../services/fileTypeFilter.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { IFileTypeFilter } from '../interface/IFileTypeFilter';
+import { FileTypeFilterService } from '../../services/fileTypeFilter.service';
 
 @Component({
   selector: 'ri-file-type-filter',

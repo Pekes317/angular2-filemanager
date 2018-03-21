@@ -1,11 +1,11 @@
-import {DropdownComponent} from './dropdown.component';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {DebugElement} from '@angular/core';
-import {ButtonClass} from './Button.class';
-import {IButton} from './IButton';
-import {ButtonDividerClass} from './ButtonDivider.class';
-import {By} from '@angular/platform-browser';
-import {TranslateModule} from 'ng2-translate';
+import { DropdownComponent } from './dropdown.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { ButtonClass } from './Button.class';
+import { IButton } from './IButton';
+import { ButtonDividerClass } from './ButtonDivider.class';
+import { By } from '@angular/platform-browser';
+import { TranslateModule } from 'ng2-translate';
 
 describe('dropdown.component', () => {
   let comp: DropdownComponent;

@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {Store} from '@ngrx/store';
-import {IFileManagerState} from './fileManagerReducer';
-import {FileManagerActionsService} from './fileManagerActions.service';
-import {IFileModel} from '../filesList/interface/IFileModel';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {ICropBounds} from '../crop/ICropBounds';
+import { Injectable } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { IFileManagerState } from './fileManagerReducer';
+import { FileManagerActionsService } from './fileManagerActions.service';
+import { IFileModel } from '../filesList/interface/IFileModel';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { ICropBounds } from '../crop/ICropBounds';
 
 @Injectable()
 export class FileManagerDispatcherService {

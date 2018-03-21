@@ -1,4 +1,4 @@
-import {IButton, IButtonData} from './IButton';
+import { IButton, IButtonData } from './IButton';
 
 export abstract class AbstractButtonClass implements IButton {
   public symbol: string;

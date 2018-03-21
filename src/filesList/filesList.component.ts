@@ -1,12 +1,12 @@
-import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
-import {FileModel} from './file.model';
-import {IFileEvent} from './interface/IFileEvent';
-import {IFileModel} from './interface/IFileModel';
-import {FileManagerConfiguration} from '../configuration/fileManagerConfiguration.service';
-import {IFileManagerAction} from '../store/fileManagerActions.service';
-import {FileManagerDispatcherService} from '../store/fileManagerDispatcher.service';
-import {NotificationsService} from 'angular2-notifications';
-import {FileManagerEffectsService} from '../store/fileManagerEffects.service';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { FileModel } from './file.model';
+import { IFileEvent } from './interface/IFileEvent';
+import { IFileModel } from './interface/IFileModel';
+import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
+import { IFileManagerAction } from '../store/fileManagerActions.service';
+import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.service';
+import { NotificationsService } from 'angular2-notifications';
+import { FileManagerEffectsService } from '../store/fileManagerEffects.service';
 
 @Component({
   selector: 'ri-files-list',
@@ -27,9 +27,9 @@ export class FilesListComponent {
   public removeTitle = 'Remove file';
 
   public constructor(public configuration: FileManagerConfiguration,
-                     private fileManagerDispatcher: FileManagerDispatcherService,
-                     notifications: NotificationsService,
-                     fileManagerEffects: FileManagerEffectsService) {
+    private fileManagerDispatcher: FileManagerDispatcherService,
+    notifications: NotificationsService,
+    fileManagerEffects: FileManagerEffectsService) {
 
     fileManagerEffects.deleteFileSuccess$
       .subscribe((action: IFileManagerAction) => {

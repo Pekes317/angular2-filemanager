@@ -1,4 +1,4 @@
-import {IUrlConfiguration} from './IUrlConfiguration';
+import { IUrlConfiguration } from './IUrlConfiguration';
 
 export interface IFileManagerConfiguration {
   urls: IUrlConfiguration;

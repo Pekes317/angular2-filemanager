@@ -1,5 +1,5 @@
-import {FilemanagerNotifcations, INotification} from './FilemanagerNotifcations';
-import {Subject} from 'rxjs/Subject';
+import { FilemanagerNotifcations, INotification } from './FilemanagerNotifcations';
+import { Subject } from 'rxjs/Subject';
 
 describe('FilemanagerNotifications', () => {
   let notification: INotification;

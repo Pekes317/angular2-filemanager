@@ -1,4 +1,4 @@
-import {IOuterFile} from './IOuterFile';
+import { IOuterFile } from './IOuterFile';
 export interface IFileModel {
   name: string;
   thumbnailUrl: string;
@@ -7,7 +7,7 @@ export interface IFileModel {
   isImage(): boolean;
   fromJSON(data: IOuterFile): void;
   toJSON(): IOuterFile;
-  getId(): string|number;
+  getId(): string | number;
   getMime(): string;
   getWidth(): number;
   getHeight(): number;

@@ -1,4 +1,4 @@
-import {ButtonDividerClass} from './ButtonDivider.class';
+import { ButtonDividerClass } from './ButtonDivider.class';
 
 describe('ButtonDivider.class', () => {
   let button: ButtonDividerClass;

@@ -1,8 +1,8 @@
-import {FileManagerActionsService, IFileManagerAction} from './fileManagerActions.service';
-import {IFileModel} from '../filesList/interface/IFileModel';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {FileModel} from '../filesList/file.model';
-import {ICropBounds} from '../crop/ICropBounds';
+import { FileManagerActionsService, IFileManagerAction } from './fileManagerActions.service';
+import { IFileModel } from '../filesList/interface/IFileModel';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { FileModel } from '../filesList/file.model';
+import { ICropBounds } from '../crop/ICropBounds';
 
 describe('fileManagerActions.service', () => {
   let service: FileManagerActionsService;
@@ -111,7 +111,7 @@ describe('fileManagerActions.service', () => {
 
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_CROP_FILE,
-        payload: {file, bounds}
+        payload: { file, bounds }
       };
 
       expect(service.cropFile(file, bounds)).toEqual(expected);
@@ -122,7 +122,7 @@ describe('fileManagerActions.service', () => {
     it('should return proper object', () => {
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_CROP_FILE_SUCCESS,
-        payload: {file}
+        payload: { file }
       };
 
       expect(service.cropFileSuccess(file)).toEqual(expected);
@@ -133,7 +133,7 @@ describe('fileManagerActions.service', () => {
     it('should return proper object', () => {
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_CROP_FILE_ERROR,
-        payload: {file}
+        payload: { file }
       };
 
       expect(service.cropFileError(file)).toEqual(expected);
@@ -144,7 +144,7 @@ describe('fileManagerActions.service', () => {
     it('should return proper object', () => {
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_DELETE_FILE,
-        payload: {file}
+        payload: { file }
       };
 
       expect(service.deleteFile(file)).toEqual(expected);
@@ -155,7 +155,7 @@ describe('fileManagerActions.service', () => {
     it('should return proper object', () => {
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_DELETE_FILE_SUCCESS,
-        payload: {file}
+        payload: { file }
       };
 
       expect(service.deleteFileSuccess(file)).toEqual(expected);
@@ -167,7 +167,7 @@ describe('fileManagerActions.service', () => {
       const fileIds = ['some-id'];
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_DELETE_FILE_SELECTION,
-        payload: {fileIds}
+        payload: { fileIds }
       };
 
       expect(service.deleteSelectedFiles(fileIds)).toEqual(expected);
@@ -178,7 +178,7 @@ describe('fileManagerActions.service', () => {
     it('should return proper object', () => {
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_DELETE_FILE_SELECTION_SUCCESS,
-        payload: {files}
+        payload: { files }
       };
 
       expect(service.deleteSelectedFilesSuccess(files)).toEqual(expected);
@@ -190,7 +190,7 @@ describe('fileManagerActions.service', () => {
       const folderId = '124';
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_LOAD_FILES,
-        payload: {folderId}
+        payload: { folderId }
       };
 
       expect(service.loadFiles(folderId)).toEqual(expected);
@@ -213,7 +213,7 @@ describe('fileManagerActions.service', () => {
       const folderId = '124';
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_LOAD_FILES_SUCCESS,
-        payload: {folderId, files}
+        payload: { folderId, files }
       };
 
       expect(service.loadFilesSuccess(folderId, files)).toEqual(expected);
@@ -235,7 +235,7 @@ describe('fileManagerActions.service', () => {
     it('should return proper object', () => {
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_SELECT_FILE,
-        payload: {file}
+        payload: { file }
       };
 
       expect(service.selectFile(file)).toEqual(expected);
@@ -257,7 +257,7 @@ describe('fileManagerActions.service', () => {
     it('should return proper object', () => {
       const expected: IFileManagerAction = {
         type: FileManagerActionsService.FILEMANAGER_UNSELECT_FILE,
-        payload: {file}
+        payload: { file }
       };
 
       expect(service.unSelectFile(file)).toEqual(expected);

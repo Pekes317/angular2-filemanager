@@ -1,7 +1,7 @@
-import {Observable} from 'rxjs/Observable';
-import {UUID} from 'angular2-uuid';
-import {Injectable} from '@angular/core';
-import {concatMap, map} from 'rxjs/operators';
+import { Observable } from 'rxjs/Observable';
+import { UUID } from 'angular2-uuid';
+import { Injectable } from '@angular/core';
+import { concatMap, map } from 'rxjs/operators';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/observable/of';
 
@@ -44,7 +44,7 @@ export class ImageDataConverter {
           if (properties.type.indexOf('image') === 0) {
             return this.getImageDimensions(data);
           } else {
-            return Observable.of({width: 0, height: 0});
+            return Observable.of({ width: 0, height: 0 });
           }
         }),
         map((dimensions: IImageDimensions) => {

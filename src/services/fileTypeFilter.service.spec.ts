@@ -1,5 +1,5 @@
-import {FileTypeFilterService} from './fileTypeFilter.service';
-import {IFileTypeFilter} from '../toolbar/interface/IFileTypeFilter';
+import { FileTypeFilterService } from './fileTypeFilter.service';
+import { IFileTypeFilter } from '../toolbar/interface/IFileTypeFilter';
 
 describe('fileTypeFilter', () => {
   let data: IFileTypeFilter;

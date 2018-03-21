@@ -1,4 +1,4 @@
-import {SearchFilterService} from './searchFilter.service';
+import { SearchFilterService } from './searchFilter.service';
 
 describe('searchFilter', () => {
   let data: string;

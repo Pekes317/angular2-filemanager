@@ -1,41 +1,41 @@
-import {NgModule, CUSTOM_ELEMENTS_SCHEMA, Provider, ModuleWithProviders} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {TreeModule} from '@rign/angular2-tree';
-import {NotificationsService, SimpleNotificationsModule} from 'angular2-notifications';
-import {FileManagerComponent} from './filemanager.component';
-import {ToolbarComponent} from './toolbar/toolbar.component';
-import {FilesListComponent} from './filesList/filesList.component';
-import {ImageCropperComponent, ImageCropperModule} from 'ng2-img-cropper';
-import {CropComponent} from './crop/crop.component';
-import {PreviewComponent} from './preview/preview.component';
-import {DropdownComponent} from './dropdown/dropdown.component';
-import {FileUploadModule} from 'ng2-file-upload';
-import {FileManagerConfiguration} from './configuration/fileManagerConfiguration.service';
-import {FileManagerUploader} from './filesList/fileManagerUploader.service';
-import {TreeService} from './configuration/tree.service';
-import {EffectsModule} from '@ngrx/effects';
-import {FileManagerEffectsService} from './store/fileManagerEffects.service';
-import {StoreModule} from '@ngrx/store';
-import {fileManagerReducer} from './store/fileManagerReducer';
-import {FileManagerActionsService} from './store/fileManagerActions.service';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {FileTypeFilterService} from './services/fileTypeFilter.service';
-import {SearchFilterService} from './services/searchFilter.service';
-import {FileManagerDispatcherService} from './store/fileManagerDispatcher.service';
-import {FileTypeFilterComponent} from './toolbar/fileTypeFilter/fileTypeFilter.component';
-import {SearchFileComponent} from './toolbar/searchFile/searchFile.component';
-import {FileManagerApiService} from './store/fileManagerApi.service';
-import {ImageDataConverter} from './services/imageDataConverter.service';
-import {FilemanagerNotifcations} from './services/FilemanagerNotifcations';
-import {ConfirmationPopoverModule} from 'angular-confirmation-popover';
-import {FileManagerBackendApiService} from './store/fileManagerBackendApi.service';
-import {CurrentDirectoryFilesService} from './services/currentDirectoryFiles.service';
-import {SelectionComponent} from './toolbar/selectionDropDown/selection.component';
-import {FileComponent} from './filesList/file/file.component';
-import {TranslateModule} from 'ng2-translate';
-import {IFileManagerConfiguration} from './configuration/IFileManagerConfiguration';
-import {HttpClientModule} from '@angular/common/http';
-import {CommonModule} from '@angular/common';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Provider, ModuleWithProviders } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TreeModule } from '@rign/angular2-tree';
+import { NotificationsService, SimpleNotificationsModule } from 'angular2-notifications';
+import { FileManagerComponent } from './filemanager.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FilesListComponent } from './filesList/filesList.component';
+import { ImageCropperComponent, ImageCropperModule } from 'ng2-img-cropper';
+import { CropComponent } from './crop/crop.component';
+import { PreviewComponent } from './preview/preview.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { FileUploadModule } from 'ng2-file-upload';
+import { FileManagerConfiguration } from './configuration/fileManagerConfiguration.service';
+import { FileManagerUploader } from './filesList/fileManagerUploader.service';
+import { TreeService } from './configuration/tree.service';
+import { EffectsModule } from '@ngrx/effects';
+import { FileManagerEffectsService } from './store/fileManagerEffects.service';
+import { StoreModule } from '@ngrx/store';
+import { fileManagerReducer } from './store/fileManagerReducer';
+import { FileManagerActionsService } from './store/fileManagerActions.service';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { FileTypeFilterService } from './services/fileTypeFilter.service';
+import { SearchFilterService } from './services/searchFilter.service';
+import { FileManagerDispatcherService } from './store/fileManagerDispatcher.service';
+import { FileTypeFilterComponent } from './toolbar/fileTypeFilter/fileTypeFilter.component';
+import { SearchFileComponent } from './toolbar/searchFile/searchFile.component';
+import { FileManagerApiService } from './store/fileManagerApi.service';
+import { ImageDataConverter } from './services/imageDataConverter.service';
+import { FilemanagerNotifcations } from './services/FilemanagerNotifcations';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
+import { FileManagerBackendApiService } from './store/fileManagerBackendApi.service';
+import { CurrentDirectoryFilesService } from './services/currentDirectoryFiles.service';
+import { SelectionComponent } from './toolbar/selectionDropDown/selection.component';
+import { FileComponent } from './filesList/file/file.component';
+import { TranslateModule } from 'ng2-translate';
+import { IFileManagerConfiguration } from './configuration/IFileManagerConfiguration';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule  } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -68,8 +68,8 @@ import {CommonModule} from '@angular/common';
   entryComponents: [
     ImageCropperComponent
   ],
-  exports: [FileManagerComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  exports: [ FileManagerComponent ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class FileManagerModule {
 
@@ -91,7 +91,7 @@ export class FileManagerModule {
         NotificationsService,
         SearchFilterService,
         TreeService,
-        {provide: 'fileManagerConfiguration', useValue: config},
+        { provide: 'fileManagerConfiguration', useValue: config },
         apiProvider ? apiProvider : FileManagerApiService
       ]
     }
@@ -115,7 +115,7 @@ export class FileManagerModule {
         NotificationsService,
         SearchFilterService,
         TreeService,
-        {provide: 'fileManagerConfiguration', useValue: config},
+        { provide: 'fileManagerConfiguration', useValue: config },
         apiProvider ? apiProvider : FileManagerApiService
       ]
     }

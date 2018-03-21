@@ -1,4 +1,4 @@
-import {AbstractButtonClass} from './AbstractButton.class';
+import { AbstractButtonClass } from './AbstractButton.class';
 
 export class ButtonClass extends AbstractButtonClass {
   public isDivider(): boolean {

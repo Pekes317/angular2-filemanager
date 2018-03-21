@@ -1,14 +1,14 @@
-import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
-import {ITreeAction, IOuterNode, TreeActionsService} from '@rign/angular2-tree';
-import {FileManagerActionsService, IFileManagerAction} from './fileManagerActions.service';
-import {IOuterFile} from '../filesList/interface/IOuterFile';
-import {Observable} from 'rxjs/Observable';
-import {IFileModel} from '../filesList/interface/IFileModel';
-import {ICropBounds} from '../crop/ICropBounds';
-import {FileManagerApiService} from './fileManagerApi.service';
-import {FilemanagerNotifcations} from '../services/FilemanagerNotifcations';
-import {catchError, filter, map, switchMap} from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { Actions, Effect } from '@ngrx/effects';
+import { ITreeAction, IOuterNode, TreeActionsService } from '@rign/angular2-tree';
+import { FileManagerActionsService, IFileManagerAction } from './fileManagerActions.service';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
+import { Observable } from 'rxjs/Observable';
+import { IFileModel } from '../filesList/interface/IFileModel';
+import { ICropBounds } from '../crop/ICropBounds';
+import { FileManagerApiService } from './fileManagerApi.service';
+import { FilemanagerNotifcations } from '../services/FilemanagerNotifcations';
+import { catchError, filter, map, switchMap } from 'rxjs/operators';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/of';
 
@@ -142,9 +142,9 @@ export class FileManagerEffectsService {
   public deleteFileSuccess$: Actions;
 
   constructor(private actions$: Actions,
-              private fileManagerActions: FileManagerActionsService,
-              private filemanagerNotfication: FilemanagerNotifcations,
-              private fileManagerApiService: FileManagerApiService) {
+    private fileManagerActions: FileManagerActionsService,
+    private filemanagerNotfication: FilemanagerNotifcations,
+    private fileManagerApiService: FileManagerApiService) {
 
     this.cropFileSuccess$ = this.actions$
       .ofType(FileManagerActionsService.FILEMANAGER_CROP_FILE_SUCCESS);

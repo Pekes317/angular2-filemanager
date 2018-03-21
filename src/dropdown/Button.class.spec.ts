@@ -1,5 +1,5 @@
-import {IButton, IButtonData} from './IButton';
-import {ButtonClass} from './Button.class';
+import { IButton, IButtonData } from './IButton';
+import { ButtonClass } from './Button.class';
 
 describe('Button.class', () => {
   let button: IButton;

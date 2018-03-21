@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {SearchFilterService} from '../../services/searchFilter.service';
-import {debounceTime} from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { SearchFilterService } from '../../services/searchFilter.service';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'ri-search-file',
