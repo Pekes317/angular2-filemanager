@@ -1,7 +1,7 @@
-import {IOuterFile} from '../src/filesList/interface/IOuterFile';
-import {IFileModel} from '../src/filesList/interface/IFileModel';
-import {FileModel} from '../src/filesList/file.model';
-import {IFileManagerState} from '../src/store/fileManagerReducer';
+import { IOuterFile } from '../src/filesList/interface/IOuterFile';
+import { IFileModel } from '../src/filesList/interface/IFileModel';
+import { FileModel } from '../src/filesList/file.model';
+import { IFileManagerState } from '../src/store/fileManagerReducer';
 
 export const fileData: IOuterFile = {
   id: '39097132-ed56-3c72-bfd7-898e1cc00299',
