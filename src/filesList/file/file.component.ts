@@ -3,9 +3,19 @@ import { IFileModel } from '../interface/IFileModel';
 import { FileManagerConfiguration } from '../../configuration/fileManagerConfiguration.service';
 import { IFileEvent } from '../interface/IFileEvent';
 import { FileManagerDispatcherService } from '../../store/fileManagerDispatcher.service';
+import { MatDialog } from '@angular/material';
+
+import { FileConfirmDialog } from './file-confirm.component';
 
 @Component({
   selector: 'ri-file-component',
+  styles: [
+    `.file-menu .actions {
+      display: flex;
+      justify-content: space-around;
+      transform: scale(.75);
+    }`
+  ],
   templateUrl: './file.component.html',
   encapsulation: ViewEncapsulation.None
 })
@@ -18,7 +28,7 @@ export class FileComponent {
 
   public removeTitle = 'Remove file';
 
-  public constructor(public configuration: FileManagerConfiguration,
+  public constructor(public configuration: FileManagerConfiguration, private dialog: MatDialog,
     private fileManagerDispatcher: FileManagerDispatcherService) {
   }
 
@@ -28,7 +38,15 @@ export class FileComponent {
    * @param file
    */
   public deleteFile($event: MouseEvent, file: IFileModel) {
-    this.fileManagerDispatcher.deleteFile(file);
+    let dialogRef = this.dialog.open(FileConfirmDialog, {
+      data: { title: this.removeTitle, message: this.getRemoveMessage(file) }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.fileManagerDispatcher.deleteFile(file);
+      }
+    });
 
     $event.preventDefault();
     $event.stopPropagation();

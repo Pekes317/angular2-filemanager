@@ -37,6 +37,9 @@ import { IFileManagerConfiguration } from './configuration/IFileManagerConfigura
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule  } from '@angular/common';
 
+import { MaterialModule } from './material.module';
+import { FileConfirmDialog } from './filesList/file/file-confirm.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -46,6 +49,7 @@ import { CommonModule  } from '@angular/common';
     FileUploadModule,
     HttpClientModule,
     ImageCropperModule,
+    MaterialModule,
     ReactiveFormsModule,
     SimpleNotificationsModule,
     StoreModule.forFeature('files', fileManagerReducer),
@@ -56,6 +60,7 @@ import { CommonModule  } from '@angular/common';
   declarations: [
     FileManagerComponent,
     FileComponent,
+    FileConfirmDialog,
     FileTypeFilterComponent,
     ToolbarComponent,
     FilesListComponent,
@@ -66,6 +71,7 @@ import { CommonModule  } from '@angular/common';
     SelectionComponent
   ],
   entryComponents: [
+    FileConfirmDialog,
     ImageCropperComponent
   ],
   exports: [ FileManagerComponent ],

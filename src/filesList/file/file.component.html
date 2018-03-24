@@ -1,25 +1,23 @@
 <div *ngIf="configuration.isMultiSelection" class="file-selection-input">
-  <i class="fa fa-2x checked fa-check-square-o" (click)="unSelectFile()"></i>
-  <i class="fa fa-2x unchecked fa-square-o" (click)="selectFile()"></i>
+  <mat-icon class="checked" (click)="unSelectFile()">check_box</mat-icon>
+  <mat-icon class="unchecked" (click)="selectFile()">check_box_outline_blank</mat-icon>
 </div>
 <div class="img-rounded file-img" [ngClass]="{'file-img-symbol': !file.isImage()}"
      [style.background-image]="'url(' + file.thumbnailUrl + ')'"></div>
 <span class="file-name">{{file.name}}</span>
 <div class="file-menu">
-  <div class="btn-group btn-group-sm">
-    <button mwlConfirmationPopover [title]="removeTitle" [message]="getRemoveMessage(file)" [appendToBody]="true"
-            [confirmText]="'Yes'" [cancelText]="'No'" placement="bottom" (confirm)="deleteFile($event, file)"
-            class="btn btn-sm btn-danger btn-icon">
-      <i class="fa fa-trash"></i>
+  <div class="actions">
+    <button mat-mini-fab color="warn" (click)="deleteFile($event, file)">
+      <mat-icon>delete</mat-icon>
     </button>
-    <button (click)="openPreview($event)" class="btn btn-sm btn-default btn-icon">
-      <i class="fa fa-search"></i>
+    <button mat-mini-fab color="default" (click)="openPreview($event)">
+      <mat-icon>search</mat-icon>
     </button>
-    <button (click)="openCrop($event)" class="btn btn-sm btn-default btn-icon">
-      <i class="fa fa-crop"></i>
+    <button mat-mini-fab color="default" (click)="openCrop($event)">
+      <mat-icon>crop</mat-icon>
     </button>
-    <button (click)="chooseFile($event, file)" class="btn btn-sm btn-primary btn-icon">
-      <i class="fa fa-image"></i>
+    <button mat-mini-fab color="primary" (click)="chooseFile($event, file)">
+      <mat-icon>photo</mat-icon>
     </button>
   </div>
 </div>
