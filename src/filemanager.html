@@ -20,7 +20,9 @@
   <div *ngIf="isPreviewMode || isCropMode" class="backdrop">
     <div class="modal-view">
       <div class="modal-close">
-        <i class="fa fa-2x fa-times" (click)="closeModal()"></i>
+        <button mat-icon-button (click)="closeModal()">
+            <mat-icon>close</mat-icon>
+        </button>
       </div>
       <ri-file-preview *ngIf="isPreviewMode" [files]="filteredFiles$ | async" [file]="currentSelectedFile"></ri-file-preview>
       <crop-image *ngIf="isCropMode" [file]="currentSelectedFile"></crop-image>

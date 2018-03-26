@@ -20,14 +20,13 @@ import { ImageCropperComponent } from 'ng2-img-cropper';
         <div #container></div>
       </div>
       <div class="btn-toolbar">
-        <div class="btn-group">
-          <button class="btn btn-primary" *ngFor="let cropSize of cropSizeList" (click)="updateCropSize(cropSize)"
-                  [ngClass]="{'active': cropSize == currentCropSize}">{{cropSize.name | translate}}
-          </button>
-        </div>
+        <mat-button-toggle-group>
+          <mat-button-toggle *ngFor="let cropSize of cropSizeList" (click)="updateCropSize(cropSize)"
+            [checked]="cropSize === currentCropSize" [value]="cropSize">{{cropSize.name | translate}}</mat-button-toggle>
+        </mat-button-toggle-group>
         <div class="btn-group pull-right">
-          <button class="btn btn-success btn-icon" (click)="cropImage()">
-            <i class="fa fa-check"></i>
+          <button mat-raised-button (click)="cropImage()" color="accent">
+            <mat-icon>check</mat-icon>
             <span>{{'RI_FM_BTN_SAVE' | translate}}</span>
           </button>
         </div>

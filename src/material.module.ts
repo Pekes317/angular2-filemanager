@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -18,7 +18,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   exports: [
     MatButtonModule,
-    MatCardModule,
+    MatButtonToggleModule,
     MatCheckboxModule,
     MatDialogModule,
     MatGridListModule,
