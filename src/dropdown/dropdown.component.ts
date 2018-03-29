@@ -14,18 +14,7 @@ export class DropdownComponent {
 
   @Output() onClick = new EventEmitter();
 
-  public isOpen = false;
-
-  public hide(): void {
-    this.isOpen = false;
-  }
-
   public selectButton(button: IButtonData): void {
-    this.hide();
     this.onClick.emit(button);
-  }
-
-  public toggleOpen() {
-    this.isOpen = !this.isOpen;
   }
 }

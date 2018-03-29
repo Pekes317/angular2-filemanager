@@ -1,16 +1,16 @@
-import {Component, EventEmitter, OnDestroy, Output} from '@angular/core';
-import {IButton, IButtonData} from '../../dropdown/IButton';
-import {ButtonClass} from '../../dropdown/Button.class';
-import {Button} from '../models/button.model';
-import {ButtonDividerClass} from '../../dropdown/ButtonDivider.class';
-import {CurrentDirectoryFilesService} from '../../services/currentDirectoryFiles.service';
-import {Subscription} from 'rxjs/Subscription';
-import {FileManagerConfiguration} from '../../configuration/fileManagerConfiguration.service';
-import {IToolbarEvent} from '../interface/IToolbarEvent';
-import {ToolbarEventModel} from '../models/toolbarEvent.model';
-import {Observable} from 'rxjs/Observable';
+import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
+import { IButton, IButtonData } from '../../dropdown/IButton';
+import { ButtonClass } from '../../dropdown/Button.class';
+import { Button } from '../models/button.model';
+import { ButtonDividerClass } from '../../dropdown/ButtonDivider.class';
+import { CurrentDirectoryFilesService } from '../../services/currentDirectoryFiles.service';
+import { Subscription } from 'rxjs/Subscription';
+import { FileManagerConfiguration } from '../../configuration/fileManagerConfiguration.service';
+import { IToolbarEvent } from '../interface/IToolbarEvent';
+import { ToolbarEventModel } from '../models/toolbarEvent.model';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/combineLatest';
-import {distinctUntilChanged} from 'rxjs/operators';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'ri-selection-dropdown',
@@ -26,7 +26,7 @@ export class SelectionComponent implements OnDestroy {
     name: 'RI_FM_LBL_SELECT_ALL',
     label: true,
     icon: true,
-    iconCssClass: 'fa fa-check-square-o'
+    iconCssClass: 'check_box'
   });
 
   private unselectAllButton = new ButtonClass({
@@ -34,7 +34,7 @@ export class SelectionComponent implements OnDestroy {
     name: 'RI_FM_LBL_UNSELECT_ALL',
     label: true,
     icon: true,
-    iconCssClass: 'fa fa-square-o'
+    iconCssClass: 'check_box_outline_blank'
   });
 
   private inverseSelectionButton = new ButtonClass({
@@ -42,7 +42,7 @@ export class SelectionComponent implements OnDestroy {
     name: 'RI_FM_LBL_INVERSE_SELECTION',
     label: true,
     icon: true,
-    iconCssClass: 'fa fa-check-square'
+    iconCssClass: 'check_box'
   });
 
   private deleteSelectionButton = new ButtonClass({
@@ -50,7 +50,7 @@ export class SelectionComponent implements OnDestroy {
     name: 'RI_FM_LBL_DELETE_SELECTION',
     label: true,
     icon: true,
-    iconCssClass: 'fa fa-trash'
+    iconCssClass: 'delete'
   });
 
   private chooseSelectionButton = new ButtonClass({
@@ -58,13 +58,13 @@ export class SelectionComponent implements OnDestroy {
     name: 'RI_FM_LBL_CHOOSE_SELECTION',
     label: true,
     icon: true,
-    iconCssClass: 'fa fa-image'
+    iconCssClass: 'image'
   });
 
   private onLoadFilesSubscriber: Subscription;
 
   public constructor(public configuration: FileManagerConfiguration,
-                     private currentDirectoryFilesService: CurrentDirectoryFilesService) {
+    private currentDirectoryFilesService: CurrentDirectoryFilesService) {
 
     this.selectButtonsList = this.createBasicButtons();
 

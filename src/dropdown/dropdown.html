@@ -1,17 +1,17 @@
 <div class="btn-group dropdown" [ngClass]="{'open': isOpen}">
-  <button class="btn btn-default" [ngClass]="{disabled: mainButton.disabled}" (click)="selectButton(mainButton)">
+  <button mat-icon-button [disabled]="mainButton.disabled" (click)="selectButton(mainButton)">
     <span *ngIf="displayMainButtonLabel">{{mainButton.name}}</span>
-    <i *ngIf="mainButton.icon" class="{{mainButton.iconCssClass}}"></i>
+    <mat-icon *ngIf="mainButton.icon">{{mainButton.iconCssClass}}</mat-icon>
   </button>
-  <button class="btn btn-default dropdown-toggle" [ngClass]="{disabled: mainButton.disabled}" (click)="toggleOpen()">
-    <span class="caret"></span>
+  <button mat-icon-button [disabled]="mainButton.disabled" [matMenuTriggerFor]="dropdown">
+    <mat-icon>arrow_drop_down</mat-icon>
   </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="single-button" (mouseleave)="hide()">
-    <li role="menuitem" [ngClass]="{divider: button.isDivider(), disabled: button.disabled}" *ngFor="let button of buttons">
-      <a (click)="selectButton(button)" *ngIf="!button.isDivider()">
-        <span *ngIf="button.icon" class="{{button.iconCssClass}}"></span>
+  <mat-menu #dropdown="matMenu">
+    <div *ngFor="let button of buttons">
+      <button  mat-menu-item (click)="selectButton(button)" *ngIf="!button.isDivider()">
+        <mat-icon *ngIf="button.icon">{{button.iconCssClass}}</mat-icon>
         <span *ngIf="button.label">{{button.name | translate}}</span>
-      </a>
-    </li>
-  </ul>
+      </button>
+    </div>
+  </mat-menu>
 </div>
