@@ -4,6 +4,11 @@ import { FileTypeFilterService } from '../../services/fileTypeFilter.service';
 
 @Component({
   selector: 'ri-file-type-filter',
+  styles: [
+    `.ri-filters {
+      transform: scale(.7);
+    }`
+  ],
   templateUrl: './fileTypeFilter.component.html'
 })
 

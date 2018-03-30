@@ -26,32 +26,32 @@ export class FileManagerConfiguration {
     {
       name: 'ALL',
       mimes: [],
-      iconCls: 'fa fa-file-o',
+      iconCls: 'insert_drive_file',
       text: 'All files',
       defaultSelected: true
     },
     {
       name: 'IMAGES',
       mimes: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif', 'image/png'],
-      iconCls: 'fa fa-picture-o',
+      iconCls: 'image',
       text: 'Images'
     },
     {
       name: 'AUDIO',
       mimes: ['audio/mpeg', 'audio/x-ms-wma', 'audio/vnd.rn-realaudio', 'audio/x-wav', 'audio/mp3'],
-      iconCls: 'fa fa-file-audio-o',
+      iconCls: 'radio',
       text: 'Audio'
     },
     {
       name: 'VIDEO',
       mimes: ['video/mpeg', 'video/mp4', 'video/quicktime', 'video/x-ms-wmv'],
-      iconCls: 'fa fa-file-video-o',
+      iconCls: 'movie',
       text: 'Video'
     },
     {
       name: 'ARCHIVE',
       mimes: ['application/zip'],
-      iconCls: 'fa fa-file-archive-o',
+      iconCls: 'archive',
       text: 'Archive'
     }
   ];

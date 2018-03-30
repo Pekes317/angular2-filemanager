@@ -1,13 +1,11 @@
 <div class="toolbar row">
   <div class="col-md-6">
     <div class="btn-group">
-      <button class="btn btn-default" (click)="addFolder()">
-        <i class="fa fa-plus"></i>
-        <i class="fa fa-folder-o"></i>
+      <button mat-icon-button (click)="addFolder()">
+        <mat-icon>create_new_folder</mat-icon>
       </button>
-      <button class="btn btn-default" (click)="fileInput.click()">
-        <i class="fa fa-plus"></i>
-        <i class="fa fa-file-o"></i>
+      <button mat-icon-button (click)="fileInput.click()">
+        <mat-icon>file_upload</mat-icon>
       </button>
       <span class="hidden-input-file">
         <input #fileInput type="file" ng2FileSelect [uploader]="fileManagerUploader.uploader" multiple/>
@@ -15,8 +13,8 @@
     </div>
     <ri-selection-dropdown (onMenuButtonClick)="onMenuButtonClick.next($event)"></ri-selection-dropdown>
     <div class="btn-group">
-      <button class="btn btn-default" (click)="onRefreshFilesList()">
-        <i class="fa fa-refresh"></i>
+      <button mat-icon-button (click)="onRefreshFilesList()">
+        <mat-icon>refresh</mat-icon>
       </button>
     </div>
   </div>

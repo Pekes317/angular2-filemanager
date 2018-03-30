@@ -1,6 +1,5 @@
-<div class="btn-group">
-  <button *ngFor="let type of typeFilterList" class="btn btn-default" [ngClass]="{'active': type === selectedType}"
-          (click)="setFilterType(type)">
-    <i class="{{type.iconCls}}"></i>
-  </button>
-</div>
+<mat-button-toggle-group class="btn-group ri-filters">
+  <mat-button-toggle *ngFor="let type of typeFilterList" [value]="type" (click)="setFilterType(type)" [checked]="type === selectedType">
+    <mat-icon>{{type.iconCls}}</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
