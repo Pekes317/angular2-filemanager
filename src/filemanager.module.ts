@@ -36,14 +36,13 @@ import { TranslateModule } from 'ng2-translate';
 import { IFileManagerConfiguration } from './configuration/IFileManagerConfiguration';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule  } from '@angular/common';
-
 import { MaterialModule } from './material.module';
 import { FileConfirmDialog } from './filesList/file/file-confirm.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    ConfirmationPopoverModule,
+    // ConfirmationPopoverModule,
     EffectsModule.forFeature([FileManagerEffectsService]),
     FormsModule,
     FileUploadModule,
