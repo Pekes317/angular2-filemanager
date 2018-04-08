@@ -13,7 +13,7 @@ import { ImageCropperComponent } from 'ng2-img-cropper';
 
 @Component({
   selector: 'crop-image',
-  styleUrls: ['./crop.less'],
+  styleUrls: ['./crop.scss'],
   template: `
     <div class="crop-image">
       <div class="crop-workbench">

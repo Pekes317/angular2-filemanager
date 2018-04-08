@@ -5,7 +5,7 @@ import { FileManagerConfiguration, FileManagerDispatcherService } from '../../fi
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   public constructor(public fileManagerConfiguration: FileManagerConfiguration,

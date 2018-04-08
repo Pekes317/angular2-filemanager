@@ -1,17 +1,17 @@
-@width: 140px;
-@height: 110px;
+$width: 140px;
+$height: 110px;
 
-@borderSize: 1px;
+$borderSize: 1px;
 
-@paddingSize: 5px;
-@marginSize: 20px;
-@borderRadius: 10px;
+$paddingSize: 5px;
+$marginSize: 20px;
+$borderRadius: 10px;
 
-@borderColor: #cccccc;
-@backgroundColor: #eee;
-@backgroundColorAlpha: rgba(238, 238, 238, 0.5);
-@backgroundColorSelected: rgb(255, 243, 58);
-@backgroundColorSelectedAlpha: rgba(255, 243, 58, 0.5);
+$borderColor: #cccccc;
+$backgroundColor: #eee;
+$backgroundColorAlpha: rgba(238, 238, 238, 0.5);
+$backgroundColorSelected: rgb(255, 243, 58);
+$backgroundColorSelectedAlpha: rgba(255, 243, 58, 0.5);
 
 .files-list {
   .file {
@@ -21,18 +21,18 @@
 
     text-align: center;
 
-    width: @width;
-    height: @height;
+    width: $width;
+    height: $height;
 
-    padding: @paddingSize;
-    border: @borderSize solid @borderColor;
-    background-color: @backgroundColor;
-    border-radius: @borderRadius;
-    margin: 0 0 @marginSize @marginSize;
+    padding: $paddingSize;
+    border: $borderSize solid $borderColor;
+    background-color: $backgroundColor;
+    border-radius: $borderRadius;
+    margin: 0 0 $marginSize $marginSize;
 
     .file-img {
-      width: @width - 2 * (@paddingSize + @borderSize);
-      height: @height - 2 * (@paddingSize + @borderSize);
+      width: $width - 2 * ($paddingSize + $borderSize);
+      height: $height - 2 * ($paddingSize + $borderSize);
       background-size: cover;
       background-repeat: no-repeat;
 
@@ -49,7 +49,7 @@
       left: 0;
       right: 0;
       text-align: center;
-      background-color: @backgroundColorAlpha;
+      background-color: $backgroundColorAlpha;
     }
 
     .file-menu {
@@ -90,11 +90,11 @@
     }
 
     &.selected {
-      border-color: @backgroundColorSelected;
-      background-color: @backgroundColorSelectedAlpha;
+      border-color: $backgroundColorSelected;
+      background-color: $backgroundColorSelectedAlpha;
 
       .file-name {
-        background-color: @backgroundColorSelectedAlpha;
+        background-color: $backgroundColorSelectedAlpha;
       }
 
       .file-menu, .file-selection-input {
@@ -121,4 +121,3 @@
     }
   }
 }
-

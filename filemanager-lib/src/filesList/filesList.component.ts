@@ -11,7 +11,7 @@ import { FileManagerEffectsService } from '../store/fileManagerEffects.service';
 @Component({
   selector: 'ri-files-list',
   templateUrl: './files.html',
-  styleUrls: ['./files-list.less'],
+  styleUrls: ['./files-list.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })

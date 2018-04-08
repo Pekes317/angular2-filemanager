@@ -8,7 +8,7 @@ import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.ser
 
 @Component({
   selector: 'ri-toolbar',
-  styleUrls: ['./toolbar.less'],
+  styleUrls: ['./toolbar.scss'],
   templateUrl: './toolbar.html'
 })
 

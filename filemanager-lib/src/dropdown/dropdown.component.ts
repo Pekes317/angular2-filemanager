@@ -3,7 +3,7 @@ import { IButtonData } from './IButton';
 
 @Component({
   selector: 'ri-dropdown',
-  styleUrls: ['./dropdown.less'],
+  styleUrls: ['./dropdown.scss'],
   templateUrl: './dropdown.html'
 })
 

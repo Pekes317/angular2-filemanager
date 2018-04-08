@@ -36,7 +36,7 @@ import { Subscription } from 'rxjs/Subscription';
 @Component({
   selector: 'ri-filemanager',
   providers: [NodeService, NotificationsService],
-  styleUrls: ['./main.less'],
+  styleUrls: ['./main.scss'],
   templateUrl: './filemanager.html'
 })
 export class FileManagerComponent implements OnInit, OnDestroy {
