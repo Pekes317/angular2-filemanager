@@ -1,0 +1,55 @@
+{
+  "name": "@rign/angular2-filemanager",
+  "version": "1.3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/qjon/angular2-filemanager.git"
+  }, 
+  "author": "Rafal Ignaszewski <rafal@ignaszewski.pl> http://ignaszewski.pl",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "filemanager",
+    "file",
+    "manager"
+  ],
+  "peerDependencies": {
+    "@angular/animations": "^5.2.9",
+    "@angular/cdk": "^5.2.4",
+    "@angular/common": "^5.2.9",
+    "@angular/compiler": "^5.2.9",
+    "@angular/core": "^5.2.9",
+    "@angular/forms": "^5.2.9",
+    "@angular/http": "^5.2.9",
+    "@angular/material": "^5.2.4",
+    "@angular/platform-browser": "^5.2.9",
+    "@angular/platform-browser-dynamic": "^5.2.9",
+    "@angular/router": "^5.2.9",
+    "@ngrx/effects": "^5.2.0",
+    "@ngrx/store": "^5.2.0",
+    "@ngrx/store-devtools": "^5.2.0",
+    "@rign/angular2-tree": "2.3.0",
+    "angular-confirmation-popover": "4.1.0",
+    "angular2-notifications": "0.9.8",
+    "angular2-uuid": "1.1.1",
+    "bootstrap": "^3.3.7",
+    "core-js": "2.5.4",
+    "font-awesome": "4.7.0",
+    "hammerjs": "^2.0.8",
+    "ng2-file-upload": "1.3.0",
+    "ng2-img-cropper": "0.9.0",
+    "ng2-translate": "^5.0.0",
+    "ngx-contextmenu": "^4.2.0",
+    "rxjs": "^5.5.8",
+    "ts-helpers": "1.1.2",
+    "zone.js": "0.8.25"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "workingDirectory": "../.ng_build",
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    },
+    "dest": "../dist/angular2-filemanager"
+  }
+}

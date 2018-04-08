@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect } from '@ngrx/effects';
-import { ITreeAction, IOuterNode, TreeActionsService } from '@rign/angular2-tree';
+import { ITreeAction, ITreeActionPayload, IOuterNode, TreeActionsService } from '@rign/angular2-tree';
 import { FileManagerActionsService, IFileManagerAction } from './fileManagerActions.service';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
 import { Observable } from 'rxjs/Observable';
@@ -99,10 +99,10 @@ export class FileManagerEffectsService {
   public moveFile$ = this.actions$
     .ofType(TreeActionsService.TREE_MOVE_NODE)
     .pipe(
-      filter((action: ITreeAction) => {
+      filter((action: ITreeAction<ITreeActionPayload>) => {
         return action.payload.sourceOfDroppedData === 'FILE';
       }),
-      switchMap((action: ITreeAction) => this.moveFiles([<IOuterFile>action.payload.oldNode], action.payload.node)
+      switchMap((action: ITreeAction<ITreeActionPayload>) => this.moveFiles([<IOuterFile>action.payload.oldNode], action.payload.node)
         .pipe(
           map((result: IOuterFile[]): IFileManagerAction => {
             const folderId = (<IOuterFile>action.payload.oldNode).folderId;

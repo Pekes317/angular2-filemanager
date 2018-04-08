@@ -14,23 +14,23 @@ import {
   treeStateSelector,
   NodeDispatcherService,
 } from '@rign/angular2-tree';
-import { FileModel } from './filesList/file.model';
+import { FileModel } from '../filesList/file.model';
 import { NotificationsService } from 'angular2-notifications';
-import { IFileEvent } from './filesList/interface/IFileEvent';
-import { Button } from './toolbar/models/button.model';
-import { FilesListComponent } from './filesList/filesList.component';
-import { IToolbarEvent } from './toolbar/interface/IToolbarEvent';
-import { IFileModel } from './filesList/interface/IFileModel';
-import { FileManagerConfiguration } from './configuration/fileManagerConfiguration.service';
+import { IFileEvent } from '../filesList/interface/IFileEvent';
+import { Button } from '../toolbar/models/button.model';
+import { FilesListComponent } from '../filesList/filesList.component';
+import { IToolbarEvent } from '../toolbar/interface/IToolbarEvent';
+import { IFileModel } from '../filesList/interface/IFileModel';
+import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
-import { FileManagerDispatcherService } from './store/fileManagerDispatcher.service';
-import { FileManagerEffectsService } from './store/fileManagerEffects.service';
-import { FileManagerApiService } from './store/fileManagerApi.service';
-import { FilemanagerNotifcations, INotification } from './services/FilemanagerNotifcations';
-import { CurrentDirectoryFilesService } from './services/currentDirectoryFiles.service';
+import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.service';
+import { FileManagerEffectsService } from '../store/fileManagerEffects.service';
+import { FileManagerApiService } from '../store/fileManagerApi.service';
+import { FilemanagerNotifcations, INotification } from '../services/FilemanagerNotifcations';
+import { CurrentDirectoryFilesService } from '../services/currentDirectoryFiles.service';
 import { filter, map } from 'rxjs/operators';
-import { IOuterFile } from './filesList/interface/IOuterFile';
+import { IOuterFile } from '../filesList/interface/IOuterFile';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({

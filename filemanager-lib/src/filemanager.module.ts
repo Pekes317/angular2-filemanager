@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Provider, ModuleWithProviders } from 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TreeModule } from '@rign/angular2-tree';
 import { NotificationsService, SimpleNotificationsModule } from 'angular2-notifications';
-import { FileManagerComponent } from './filemanager.component';
+import { FileManagerComponent } from './filemanager/filemanager.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FilesListComponent } from './filesList/filesList.component';
 import { ImageCropperComponent, ImageCropperModule } from 'ng2-img-cropper';
@@ -36,13 +36,13 @@ import { TranslateModule } from 'ng2-translate';
 import { IFileManagerConfiguration } from './configuration/IFileManagerConfiguration';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule  } from '@angular/common';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './material/material.module';
 import { FileConfirmDialog } from './filesList/file/file-confirm.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    // ConfirmationPopoverModule,
+    ConfirmationPopoverModule,
     EffectsModule.forFeature([FileManagerEffectsService]),
     FormsModule,
     FileUploadModule,
@@ -50,7 +50,7 @@ import { FileConfirmDialog } from './filesList/file/file-confirm.component';
     ImageCropperModule,
     MaterialModule,
     ReactiveFormsModule,
-    SimpleNotificationsModule,
+    SimpleNotificationsModule.forRoot(),
     StoreModule.forFeature('files', fileManagerReducer),
     StoreDevtoolsModule.instrument({}),
     TranslateModule,

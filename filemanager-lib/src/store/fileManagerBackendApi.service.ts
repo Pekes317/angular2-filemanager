@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IOuterNode } from '@rign/angular2-tree';
 import { Observable } from 'rxjs/Observable';
-import { ICropBounds, IFileManagerApi, IOuterFile, IFileDataProperties } from '../../main';
+import { ICropBounds, IFileManagerApi, IOuterFile, IFileDataProperties } from '../public_api';
 import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
 import { AbstractFileManagerApiService } from './fileManagerApiAbstract.class';
 import { HttpClient, HttpParams } from '@angular/common/http';

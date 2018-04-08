@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {FileManagerConfiguration, FileManagerDispatcherService} from '../../../main';
+import { Component } from '@angular/core';
+import { FileManagerConfiguration, FileManagerDispatcherService } from '../../filemanager-lib/src/public_api';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import {FileManagerConfiguration, FileManagerDispatcherService} from '../../../m
 })
 export class AppWithBackendComponent {
   public constructor(public fileManagerConfiguration: FileManagerConfiguration,
-                     private fileManagerDispatcher: FileManagerDispatcherService) {
+    private fileManagerDispatcher: FileManagerDispatcherService) {
   }
 
   public toggleMultiSelection() {

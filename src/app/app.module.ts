@@ -1,15 +1,15 @@
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {AppComponent} from './app.component';
-import {FileManagerModule, IFileManagerConfiguration} from '../../../main';
-import {TranslateModule, TranslateService} from 'ng2-translate';
-import {HttpClientModule} from '@angular/common/http';
-import {EffectsModule} from '@ngrx/effects';
-import {StoreModule} from '@ngrx/store';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {TreeModule} from '@rign/angular2-tree';
-import {ConfirmationPopoverModule} from 'angular-confirmation-popover';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { FileManagerModule, IFileManagerConfiguration } from '../../filemanager-lib/src/public_api';
+import { TranslateModule, TranslateService } from 'ng2-translate';
+import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TreeModule } from '@rign/angular2-tree';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 const fileManagerConfiguration: IFileManagerConfiguration = {
