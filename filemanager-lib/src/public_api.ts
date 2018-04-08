@@ -38,3 +38,4 @@ export * from './toolbar/selectionDropDown/selection.component';
 export * from './toolbar/toolbar.component';
 export * from './filemanager/filemanager.component';
 export * from './filemanager.module';
+export * from './material/material.module';

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { FileManagerModule, IFileManagerConfiguration } from '../../filemanager-lib/src/public_api';
+import { FileManagerModule, IFileManagerConfiguration, MaterialModule } from '../../filemanager-lib/src/public_api';
 import { TranslateModule, TranslateService } from 'ng2-translate';
 import { HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
@@ -35,6 +35,7 @@ const fileManagerConfiguration: IFileManagerConfiguration = {
     FileManagerModule.forRoot(fileManagerConfiguration),
     FormsModule,
     HttpClientModule,
+    MaterialModule,
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument(),
     TreeModule.forRoot(),
