@@ -1,6 +1,6 @@
 import { fileManagerReducer, IFileManagerState } from './fileManagerReducer';
 import { FileManagerActionsService, IFileManagerAction } from './fileManagerActions.service';
-import { filesData } from '../../_unitTestMocks/fileDataMock';
+import { filesData } from '../../../_unitTestMocks/fileDataMock';
 import { FileModel } from '../filesList/file.model';
 
 describe('fileManagerReducer', () => {

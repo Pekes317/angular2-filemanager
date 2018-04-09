@@ -1,14 +1,15 @@
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Http, Response, ResponseOptions, URLSearchParams } from '@angular/http';
+import { IOuterNode } from '@beezleeart/ngx-tree';
+import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
+
 import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
 import { FileManagerBackendApiService } from './fileManagerBackendApi.service';
-import { rootNode } from '../../_unitTestMocks/folderDataMock';
-import { Observable } from 'rxjs/Observable';
+import { rootNode } from '../../../_unitTestMocks/folderDataMock';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
-import { filesData } from '../../_unitTestMocks/fileDataMock';
-import { IOuterNode } from '@rign/angular2-tree';
-import { Subscription } from 'rxjs/Subscription';
+import { filesData } from '../../../_unitTestMocks/fileDataMock';
 import { ICropBounds } from '../crop/ICropBounds';
-import { HttpClient, HttpParams } from '@angular/common/http';
 
 describe('fileManagerBackendApi.service', () => {
   let service: FileManagerBackendApiService;

@@ -1,8 +1,9 @@
 import { Injectable, Inject } from '@angular/core';
+import { FileUploaderOptions } from 'ng2-file-upload';
+
 import { ExtendedFileUploader } from '../services/extendedFileUplaoder.service';
 import { IFileManagerConfiguration } from '../configuration/IFileManagerConfiguration';
 import { FilemanagerNotifcations } from '../services/FilemanagerNotifcations';
-import { FileUploaderOptions } from 'ng2-file-upload';
 
 @Injectable()
 export class FileManagerUploader {

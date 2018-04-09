@@ -1,4 +1,5 @@
 import { IOuterFile } from './IOuterFile';
+
 export interface IFileModel {
   name: string;
   thumbnailUrl: string;

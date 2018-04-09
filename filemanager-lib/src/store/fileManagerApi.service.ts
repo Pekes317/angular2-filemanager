@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { IOuterNode } from '@rign/angular2-tree';
-import { Observable } from 'rxjs/Observable';
+import { INodeService, IOuterNode } from '@beezleeart/ngx-tree';
 import { UUID } from 'angular2-uuid';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/observable/throw';
+
 import { IFileManagerApi } from './IFileManagerApi';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
 import { IFileDataProperties } from '../services/imageDataConverter.service';
 import { ICropBounds } from '../crop/ICropBounds';
 import { FilemanagerNotifcations } from '../services/FilemanagerNotifcations';
 import { AbstractFileManagerApiService } from './fileManagerApiAbstract.class';
-import { INodeService } from '@rign/angular2-tree';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class FileManagerApiService extends AbstractFileManagerApiService implements IFileManagerApi, INodeService {

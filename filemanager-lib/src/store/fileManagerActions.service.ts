@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
+
 import { IOuterFile } from '../filesList/interface/IOuterFile';
 import { IFileModel } from '../filesList/interface/IFileModel';
 import { ICropBounds } from '../crop/ICropBounds';

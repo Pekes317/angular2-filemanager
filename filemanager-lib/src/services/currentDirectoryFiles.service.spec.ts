@@ -1,11 +1,12 @@
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
+
 import { CurrentDirectoryFilesService } from './currentDirectoryFiles.service';
-import { MockStore } from '../../_unitTestMocks/storeMock';
+import { MockStore } from '../../../_unitTestMocks/storeMock';
 import { FileTypeFilterService } from './fileTypeFilter.service';
 import { SearchFilterService } from './searchFilter.service';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
-import { filesData, filesDataModels, state } from '../../_unitTestMocks/fileDataMock';
-import { Observable } from 'rxjs/Observable';
+import { filesData, filesDataModels, state } from '../../../_unitTestMocks/fileDataMock';
 import { IFileManagerState } from '../store/fileManagerReducer';
 
 describe('CurrentDirectoryFilesService', () => {

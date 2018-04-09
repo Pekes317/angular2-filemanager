@@ -1,12 +1,14 @@
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IOuterNode } from '@rign/angular2-tree';
+import { IOuterNode } from '@beezleeart/ngx-tree';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/throw';
+
 import { ICropBounds, IFileManagerApi, IOuterFile, IFileDataProperties } from '../public_api';
 import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
 import { AbstractFileManagerApiService } from './fileManagerApiAbstract.class';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/observable/throw';
+
 
 @Injectable()
 export class FileManagerBackendApiService extends AbstractFileManagerApiService implements IFileManagerApi {

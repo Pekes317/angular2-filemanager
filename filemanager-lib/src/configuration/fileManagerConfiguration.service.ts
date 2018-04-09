@@ -1,5 +1,6 @@
-import { IContextMenu } from '@rign/angular2-tree';
 import { Injectable, Inject } from '@angular/core';
+import { IContextMenu } from '@beezleeart/ngx-tree';
+
 import { IFileTypeFilter } from '../toolbar/interface/IFileTypeFilter';
 import { ICropSize } from '../crop/ICropSize';
 import { IFileManagerConfiguration } from './IFileManagerConfiguration';

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { FileManagerConfiguration, FileManagerDispatcherService } from '../../filemanager-lib/src/public_api';
 
 @Component({

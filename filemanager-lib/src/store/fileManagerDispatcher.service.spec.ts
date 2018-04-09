@@ -1,11 +1,12 @@
-import { FileManagerDispatcherService } from './fileManagerDispatcher.service';
 import { Store } from '@ngrx/store';
+
+import { FileManagerDispatcherService } from './fileManagerDispatcher.service';
 import { FileManagerActionsService, IFileManagerAction } from './fileManagerActions.service';
 import { IFileManagerState } from './fileManagerReducer';
 import { IFileModel } from '../filesList/interface/IFileModel';
 import { ICropBounds } from '../crop/ICropBounds';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
-import { filesData, filesDataModels } from '../../_unitTestMocks/fileDataMock';
+import { filesData, filesDataModels } from '../../../_unitTestMocks/fileDataMock';
 import { FileModel } from '../filesList/file.model';
 
 describe('FileManagerDispatcherService', () => {

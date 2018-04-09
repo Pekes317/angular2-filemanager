@@ -1,11 +1,12 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { NotificationsService } from 'angular2-notifications';
+
 import { FileModel } from './file.model';
 import { IFileEvent } from './interface/IFileEvent';
 import { IFileModel } from './interface/IFileModel';
 import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
 import { IFileManagerAction } from '../store/fileManagerActions.service';
 import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.service';
-import { NotificationsService } from 'angular2-notifications';
 import { FileManagerEffectsService } from '../store/fileManagerEffects.service';
 
 @Component({

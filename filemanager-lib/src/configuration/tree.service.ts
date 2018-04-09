@@ -1,8 +1,9 @@
 import { Injectable, Inject } from '@angular/core';
-import { NodeService } from '@rign/angular2-tree';
 import { Http } from '@angular/http';
-import { IFileManagerConfiguration } from './IFileManagerConfiguration';
 import { HttpClient } from '@angular/common/http';
+import { NodeService } from '@beezleeart/ngx-tree';
+
+import { IFileManagerConfiguration } from './IFileManagerConfiguration';
 
 @Injectable()
 export class TreeService extends NodeService {

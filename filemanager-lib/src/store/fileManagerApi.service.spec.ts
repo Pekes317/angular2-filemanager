@@ -1,9 +1,11 @@
+
+import { IOuterNode } from '@beezleeart/ngx-tree';
+import { UUID } from 'angular2-uuid';
+
 import { FilemanagerNotifcations } from '../services/FilemanagerNotifcations';
 import { FileManagerApiService } from './fileManagerApi.service';
-import { IOuterNode } from '@rign/angular2-tree';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
-import { filesData } from '../../_unitTestMocks/fileDataMock';
-import { UUID } from 'angular2-uuid';
+import { filesData } from '../../../_unitTestMocks/fileDataMock';
 
 describe('fileManagerApi.service', () => {
   let service: FileManagerApiService;

@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnChanges, Output, ViewEncapsulation } from '@angular/core';
+import { MatDialog } from '@angular/material';
+
 import { IFileModel } from '../interface/IFileModel';
 import { FileManagerConfiguration } from '../../configuration/fileManagerConfiguration.service';
 import { IFileEvent } from '../interface/IFileEvent';
 import { FileManagerDispatcherService } from '../../store/fileManagerDispatcher.service';
-import { MatDialog } from '@angular/material';
-
 import { FileConfirmDialog } from './file-confirm.component';
 
 @Component({

@@ -1,16 +1,17 @@
 import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { distinctUntilChanged } from 'rxjs/operators';
+import { Subscription } from 'rxjs/Subscription';
+import 'rxjs/add/observable/combineLatest';
+
 import { IButton, IButtonData } from '../../dropdown/IButton';
 import { ButtonClass } from '../../dropdown/Button.class';
 import { Button } from '../models/button.model';
 import { ButtonDividerClass } from '../../dropdown/ButtonDivider.class';
 import { CurrentDirectoryFilesService } from '../../services/currentDirectoryFiles.service';
-import { Subscription } from 'rxjs/Subscription';
 import { FileManagerConfiguration } from '../../configuration/fileManagerConfiguration.service';
 import { IToolbarEvent } from '../interface/IToolbarEvent';
 import { ToolbarEventModel } from '../models/toolbarEvent.model';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/combineLatest';
-import { distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'ri-selection-dropdown',

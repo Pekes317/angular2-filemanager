@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FileManagerConfiguration, FileManagerDispatcherService } from '../../filemanager-lib/src/public_api';
 
+import { FileManagerConfiguration, FileManagerDispatcherService } from '../../filemanager-lib/src/public_api';
 
 @Component({
   selector: 'app-root',

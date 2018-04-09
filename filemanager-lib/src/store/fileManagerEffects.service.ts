@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect } from '@ngrx/effects';
-import { ITreeAction, ITreeActionPayload, IOuterNode, TreeActionsService } from '@rign/angular2-tree';
+import { ITreeAction, ITreeActionPayload, IOuterNode, TreeActionsService } from '@beezleeart/ngx-tree';
+import { catchError, filter, map, switchMap } from 'rxjs/operators';
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/observable/of';
+
 import { FileManagerActionsService, IFileManagerAction } from './fileManagerActions.service';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
 import { Observable } from 'rxjs/Observable';
@@ -8,9 +12,6 @@ import { IFileModel } from '../filesList/interface/IFileModel';
 import { ICropBounds } from '../crop/ICropBounds';
 import { FileManagerApiService } from './fileManagerApi.service';
 import { FilemanagerNotifcations } from '../services/FilemanagerNotifcations';
-import { catchError, filter, map, switchMap } from 'rxjs/operators';
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/observable/of';
 
 @Injectable()
 export class FileManagerEffectsService {

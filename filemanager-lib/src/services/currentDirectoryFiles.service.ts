@@ -1,15 +1,16 @@
-import { ITreeState } from '@rign/angular2-tree';
-import { SearchFilterService } from './searchFilter.service';
-import { FileTypeFilterService } from './fileTypeFilter.service';
+import { Injectable } from '@angular/core';
+import { ITreeState } from '@beezleeart/ngx-tree';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
+import { distinctUntilChanged, map, withLatestFrom } from 'rxjs/operators';
+import 'rxjs/add/observable/combineLatest';
+
+import { SearchFilterService } from './searchFilter.service';
+import { FileTypeFilterService } from './fileTypeFilter.service';
 import { FileModel } from '../filesList/file.model';
 import { filemanagerStateSelector, getAll, IFileManagerState, storeEntities } from '../store/fileManagerReducer';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
 import { IFileTypeFilter } from '../toolbar/interface/IFileTypeFilter';
-import { Injectable } from '@angular/core';
-import { distinctUntilChanged, map, withLatestFrom } from 'rxjs/operators';
-import 'rxjs/add/observable/combineLatest';
 
 @Injectable()
 export class CurrentDirectoryFilesService {

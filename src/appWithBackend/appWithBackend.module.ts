@@ -1,20 +1,22 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
+import { TreeModule } from '@beezleeart/ngx-tree';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { TranslateModule, TranslateService } from 'ng2-translate';
+
 import { AppWithBackendComponent } from './appWithBackend.component';
 import {
   FileManagerModule,
   FileManagerApiService,
   IFileManagerConfiguration,
-  FileManagerBackendApiService
+  FileManagerBackendApiService,
+  MaterialModule
 } from '../../filemanager-lib/src/public_api';
-import { TranslateModule, TranslateService } from 'ng2-translate';
-import { HttpClientModule } from '@angular/common/http';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TreeModule } from '@rign/angular2-tree';
-import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 
 export const fileManagerConfiguration: IFileManagerConfiguration = {
   urls: {
@@ -39,6 +41,7 @@ export const fileManagerConfiguration: IFileManagerConfiguration = {
     FileManagerModule.forRoot(fileManagerConfiguration, { provide: FileManagerApiService, useClass: FileManagerBackendApiService }),
     FormsModule,
     HttpClientModule,
+    MaterialModule,
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument(),
     TreeModule.forRoot(),
