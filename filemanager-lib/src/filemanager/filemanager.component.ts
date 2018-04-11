@@ -38,7 +38,7 @@ import { IOuterFile } from '../filesList/interface/IOuterFile';
 @Component({
   selector: 'ri-filemanager',
   providers: [NodeService, NotificationsService],
-  styleUrls: ['./main.scss'],
+  styleUrls: ['./filemanager.scss'],
   templateUrl: './filemanager.html'
 })
 export class FileManagerComponent implements OnInit, OnDestroy {
