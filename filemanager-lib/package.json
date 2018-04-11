@@ -7,7 +7,7 @@
   }, 
   "author": "Rafal Ignaszewski <rafal@ignaszewski.pl> http://ignaszewski.pl",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "keywords": [
     "filemanager",
     "file",
