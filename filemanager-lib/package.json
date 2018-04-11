@@ -1,9 +1,9 @@
 {
   "name": "@beezleeart/ngx-filemanager",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/qjon/angular2-filemanager.git"
+    "url": "git+ssh://git@github.com:Pekes317/angular2-filemanager.git"
   }, 
   "author": "Peter Mast",
   "license": "MIT",
