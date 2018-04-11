@@ -46,7 +46,20 @@
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
     "workingDirectory": "../.ng_build",
     "lib": {
-      "entryFile": "src/public_api.ts"
+      "entryFile": "src/public_api.ts",
+      "umdModuleIds": {
+        "@beezleeart/ngx-tree": "@beezleeart/ngx-tree",
+        "@ngrx/store": "@ngrx/store",
+        "@ngrx/effects": "@ngrx/effects",
+        "@ngrx/store-devtools": "@ngrx/store-devtools",
+        "angular-confirmation-popover": "angular-confirmation-popover",
+        "angular2-notifications": "angular2-notifications",
+        "angular2-uuid": "angular2-uuid",
+        "ng2-file-upload": "ng2-file-upload",
+        "ng2-img-cropper": "ng2-img-cropper",
+        "ng2-img-cropper/src/cropperSettings": "ng2-img-cropper/src/cropperSettings",
+        "ng2-translate": "ng2-translate"
+      }
     },
     "dest": "../dist/ngx-filemanager"
   }
