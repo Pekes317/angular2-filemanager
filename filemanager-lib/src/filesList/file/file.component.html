@@ -2,7 +2,7 @@
   <mat-icon class="checked" (click)="unSelectFile()">check_box</mat-icon>
   <mat-icon class="unchecked" (click)="selectFile()">check_box_outline_blank</mat-icon>
 </div>
-<div class="img-rounded file-img" [ngClass]="{'file-img-symbol': !file.isImage()}"
+<div class="file-rounded file-img" [ngClass]="{'file-img-symbol': !file.isImage()}"
      [style.background-image]="'url(' + file.thumbnailUrl + ')'"></div>
 <span class="file-name">{{file.name}}</span>
 <div class="file-menu">

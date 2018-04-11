@@ -1,6 +1,6 @@
-<div class="toolbar row">
-  <div class="col-md-6">
-    <div class="btn-group">
+<mat-grid-list class="toolbar" [cols]="btnCols" rowHeight="6rem">
+  <mat-grid-tile>
+    <div class="btn-control">
       <button mat-icon-button (click)="addFolder()">
         <mat-icon>create_new_folder</mat-icon>
       </button>
@@ -12,16 +12,16 @@
       </span>
     </div>
     <ri-selection-dropdown (onMenuButtonClick)="onMenuButtonClick.next($event)"></ri-selection-dropdown>
-    <div class="btn-group">
+    <div class="btn-control">
       <button mat-icon-button (click)="onRefreshFilesList()">
         <mat-icon>refresh</mat-icon>
       </button>
     </div>
-  </div>
-  <div class="col-md-3">
+  </mat-grid-tile>
+  <mat-grid-tile>
     <ri-file-type-filter [typeFilterList]="configuration.fileTypesFilter"></ri-file-type-filter>
-  </div>
-  <div class="col-md-3">
+  </mat-grid-tile>
+  <mat-grid-tile>
     <ri-search-file></ri-search-file>
-  </div>
-</div>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,4 +1,4 @@
-<div class="btn-group dropdown" [ngClass]="{'open': isOpen}">
+<div class="dropdown" [ngClass]="{'open': isOpen}">
   <button mat-icon-button [disabled]="mainButton.disabled" (click)="selectButton(mainButton)">
     <span *ngIf="displayMainButtonLabel">{{mainButton.name}}</span>
     <mat-icon *ngIf="mainButton.icon">{{mainButton.iconCssClass}}</mat-icon>

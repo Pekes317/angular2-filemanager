@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output, Input, OnChanges } from '@angular/core';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 import { Button } from './models/button.model';
 import { ToolbarEventModel } from './models/toolbarEvent.model';
@@ -20,8 +21,10 @@ export class ToolbarComponent implements OnChanges {
   @Output() onUpload = new EventEmitter();
   @Output() onMenuButtonClick = new EventEmitter();
 
+  btnCols: number = 3;
 
-  public constructor(public configuration: FileManagerConfiguration,
+  public constructor(public breakPoint: BreakpointObserver,
+                     public configuration: FileManagerConfiguration,
                      public fileManagerUploader: FileManagerUploader,
                      private fileManagerDispatcher: FileManagerDispatcherService) {
 
@@ -38,6 +41,11 @@ export class ToolbarComponent implements OnChanges {
         this.fileManagerDispatcher.uploadError(JSON.parse(response));
       }
     };
+  }
+
+  public ngOnInit() {
+    this.breakPoint.observe(['(max-width: 660px)'])
+      .subscribe((isSmall: BreakpointState) => this.btnCols = isSmall.matches ? 1 : 3);
   }
 
   public ngOnChanges() {

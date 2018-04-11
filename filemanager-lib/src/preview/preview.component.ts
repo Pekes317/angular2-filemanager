@@ -5,7 +5,7 @@ import { FileModel } from '../filesList/file.model';
 
 @Component({
   selector: 'ri-file-preview',
-  styleUrls: ['./preview.less'],
+  styleUrls: ['./preview.scss'],
   templateUrl: './preview.html'
 })
 

@@ -88,7 +88,7 @@ export class FileComponent {
 
   public chooseFile($event: MouseEvent, file: IFileModel): void {
     this.fileManagerDispatcher.chooseFiles([file.toJSON()]);
-
+    
     $event.preventDefault();
     $event.stopPropagation();
   }

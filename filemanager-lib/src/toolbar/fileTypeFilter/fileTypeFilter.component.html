@@ -1,4 +1,4 @@
-<mat-button-toggle-group class="btn-group ri-filters">
+<mat-button-toggle-group class="ri-filters">
   <mat-button-toggle *ngFor="let type of typeFilterList" [value]="type" (click)="setFilterType(type)" [checked]="type === selectedType">
     <mat-icon>{{type.iconCls}}</mat-icon>
   </mat-button-toggle>

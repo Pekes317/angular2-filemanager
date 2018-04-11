@@ -1,7 +1,6 @@
 $foldersBoxWidth: 300px;
 
 .filemanager-container {
-  width: 990px;
   height: 700px;
 
   .tree {
@@ -18,13 +17,15 @@ $foldersBoxWidth: 300px;
 .fm-main-box {
   position: relative;
   height: 100%;
+  margin: 0 auto;
 
   .folders-box {
     display: block;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: $foldersBoxWidth;
+    width: 100%;
+    max-width: $foldersBoxWidth;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -32,7 +33,6 @@ $foldersBoxWidth: 300px;
   .files-box {
     display: block;
     position: absolute;
-    left: $foldersBoxWidth;
     top: 0;
     bottom: 0;
     overflow: hidden;

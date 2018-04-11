@@ -25,7 +25,7 @@
     "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "^5.2.9",
     "@angular/router": "^5.2.9",
-    "@beezleeart/ngx-tree": "^2.3.1",
+    "@beezleeart/ngx-tree": "^2.3.4",
     "@ngrx/effects": "^5.2.0",
     "@ngrx/store": "^5.2.0",
     "@ngrx/store-devtools": "^5.2.0",
@@ -48,6 +48,6 @@
     "lib": {
       "entryFile": "src/public_api.ts"
     },
-    "dest": "../dist/angular2-filemanager"
+    "dest": "../dist/ngx-filemanager"
   }
 }

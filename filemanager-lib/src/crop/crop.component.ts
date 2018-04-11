@@ -25,7 +25,7 @@ import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.ser
           <mat-button-toggle *ngFor="let cropSize of cropSizeList" (click)="updateCropSize(cropSize)"
             [checked]="cropSize === currentCropSize" [value]="cropSize">{{cropSize.name | translate}}</mat-button-toggle>
         </mat-button-toggle-group>
-        <div class="btn-group pull-right">
+        <div class="btn-right">
           <button mat-raised-button (click)="cropImage()" color="accent">
             <mat-icon>check</mat-icon>
             <span>{{'RI_FM_BTN_SAVE' | translate}}</span>

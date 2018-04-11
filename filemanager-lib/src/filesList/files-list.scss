@@ -31,14 +31,18 @@ $backgroundColorSelectedAlpha: rgba(255, 243, 58, 0.5);
     margin: 0 0 $marginSize $marginSize;
 
     .file-img {
-      width: $width - 2 * ($paddingSize + $borderSize);
-      height: $height - 2 * ($paddingSize + $borderSize);
+      width: 100%;
+      height: 100%;
       background-size: cover;
       background-repeat: no-repeat;
 
       &.file-img-symbol {
         background-size: contain;
         background-position-x: 50%;
+      }
+
+      &.file-rounded {
+        border-radius: 6px;
       }
     }
 

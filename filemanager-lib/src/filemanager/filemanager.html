@@ -1,27 +1,22 @@
 <div class="filemanager-container">
   <div class="fm-header">
-    <ri-toolbar
-      #toolbar
-      [currentFolderId]="currentSelectedFolderId"
-      (onAddFolderClick)="onAddFolder()"
-      (onUpload)="onUpload($event)"
-      (onMenuButtonClick)="onMenuButtonClick($event)"
-    ></ri-toolbar>
+    <ri-toolbar #toolbar [currentFolderId]="currentSelectedFolderId" (onAddFolderClick)="onAddFolder()" (onUpload)="onUpload($event)"
+      (onMenuButtonClick)="onMenuButtonClick($event)"></ri-toolbar>
   </div>
-  <div class="fm-main-box">
-    <ri-tree class="folders-box" [treeModel]="treeModel"></ri-tree>
-    <ri-files-list class="files-box" [files]="filteredFiles$ | async"
-                   [selectedFiles]="selectedFiles$ | async"
-                (onPreviewFile)="onPreviewFile($event)"
-                (onCropFile)="onOpenCropFileEditor($event)"
-                (onSelectFile)="onSelectFile($event)"
-    ></ri-files-list>
-  </div>
+  <mat-grid-list cols="2" class="fm-main-box">
+    <mat-grid-tile>
+      <ri-tree class="folders-box" [treeModel]="treeModel"></ri-tree>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <ri-files-list class="files-box" [files]="filteredFiles$ | async" [selectedFiles]="selectedFiles$ | async" (onPreviewFile)="onPreviewFile($event)"
+        (onCropFile)="onOpenCropFileEditor($event)" (onSelectFile)="onSelectFile($event)"></ri-files-list>
+    </mat-grid-tile>
+  </mat-grid-list>
   <div *ngIf="isPreviewMode || isCropMode" class="backdrop">
     <div class="modal-view">
       <div class="modal-close">
         <button mat-icon-button (click)="closeModal()">
-            <mat-icon>close</mat-icon>
+          <mat-icon>close</mat-icon>
         </button>
       </div>
       <ri-file-preview *ngIf="isPreviewMode" [files]="filteredFiles$ | async" [file]="currentSelectedFile"></ri-file-preview>
