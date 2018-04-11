@@ -12,6 +12,7 @@
     "file",
     "manager"
   ],
+  "private": false,
   "author": "Rafal Ignaszewski <rafal@ignaszewski.pl> http://ignaszewski.pl",
   "scripts": {
     "ng": "ng",

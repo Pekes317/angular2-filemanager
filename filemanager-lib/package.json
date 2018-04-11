@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/qjon/angular2-filemanager.git"
   }, 
-  "author": "Rafal Ignaszewski <rafal@ignaszewski.pl> http://ignaszewski.pl",
+  "author": "Peter Mast",
   "license": "MIT",
   "private": false,
   "keywords": [
