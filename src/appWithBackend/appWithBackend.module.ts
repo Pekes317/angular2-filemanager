@@ -22,7 +22,8 @@ export const fileManagerConfiguration: IFileManagerConfiguration = {
   urls: {
     foldersUrl: '/api/folder',
     filesUrl: '/api/files',
-    folderMoveUrl: '/api/folder/move'
+    folderMoveUrl: '/api/folder/move',
+    iconUrl: null,
   },
   isMultiSelection: true,
   mimeTypes: ['image/jpg', 'image/jpeg', 'image/png'],

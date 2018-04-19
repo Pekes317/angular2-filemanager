@@ -1,11 +1,12 @@
 import { IOuterFile } from './interface/IOuterFile';
 import { IFileModel } from './interface/IFileModel';
 import { ISelectFile } from './interface/ISelectFile';
+import { IFileManagerConfiguration } from '../configuration/IFileManagerConfiguration';
 
 export class FileModel implements IFileModel {
   static smallIconsFolder = '/icons/128px/';
   static bigIconsFolder = '/icons/512px/';
-
+  
   private _orgData: IOuterFile;
   private _name: string;
 

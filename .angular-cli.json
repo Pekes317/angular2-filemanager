@@ -22,7 +22,7 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "../filemanager-lib/src/styles/styles.scss",
+        "../filemanager-lib/src/styles/main.scss",
         "styles.css"
       ],
       "scripts": [],

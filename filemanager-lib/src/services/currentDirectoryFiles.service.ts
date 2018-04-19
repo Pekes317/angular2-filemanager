@@ -8,6 +8,7 @@ import 'rxjs/add/observable/combineLatest';
 import { SearchFilterService } from './searchFilter.service';
 import { FileTypeFilterService } from './fileTypeFilter.service';
 import { FileModel } from '../filesList/file.model';
+import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
 import { filemanagerStateSelector, getAll, IFileManagerState, storeEntities } from '../store/fileManagerReducer';
 import { IOuterFile } from '../filesList/interface/IOuterFile';
 import { IFileTypeFilter } from '../toolbar/interface/IFileTypeFilter';
@@ -41,6 +42,7 @@ export class CurrentDirectoryFilesService {
   public currentDirectoryFileIds$: Observable<string[]>;
 
   public constructor(private store: Store<IFileManagerState>,
+    private configuration: FileManagerConfiguration,
     private fileTypeFilter: FileTypeFilterService,
     private searchFilterService: SearchFilterService) {
 
@@ -83,6 +85,8 @@ export class CurrentDirectoryFilesService {
         map((state: any) => {
           return getAll(state)
             .map((file: IOuterFile) => {
+              FileModel.smallIconsFolder = `${this.configuration.iconUrl}/128px/`;
+              FileModel.bigIconsFolder = `${this.configuration.iconUrl}/512px/`
               return new FileModel(file);
             });
         })

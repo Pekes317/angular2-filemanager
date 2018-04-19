@@ -59,6 +59,7 @@ export class FileManagerConfiguration {
 
   public folderUrls: { foldersUrl: string, folderMoveUrl: string };
   public fileUrl = '/api/files';
+  public iconUrl = '/icons';
 
   public isMultiSelection: boolean;
 
@@ -72,6 +73,7 @@ export class FileManagerConfiguration {
     const { foldersUrl, folderMoveUrl } = configuration.urls;
     this.folderUrls = { foldersUrl, folderMoveUrl };
     this.fileUrl = configuration.urls.filesUrl;
+    this.iconUrl = configuration.urls.iconUrl || '/icons';
     this.isMultiSelection = configuration.isMultiSelection || false;
     this.maxFileSize = configuration.maxFileSize || 0;
     this.mimeTypes = configuration.mimeTypes || null;
