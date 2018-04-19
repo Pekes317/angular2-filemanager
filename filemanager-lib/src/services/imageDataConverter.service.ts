@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { UUID } from 'angular2-uuid';
 import { Injectable } from '@angular/core';
 import { concatMap, map } from 'rxjs/operators';

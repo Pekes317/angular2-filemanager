@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ITreeState } from '@beezleeart/ngx-tree';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { distinctUntilChanged, map, withLatestFrom } from 'rxjs/operators';
 import 'rxjs/add/observable/combineLatest';
 

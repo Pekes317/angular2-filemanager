@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { IOuterNode } from '@beezleeart/ngx-tree';
 
 import { IOuterFile } from '../filesList/interface/IOuterFile';

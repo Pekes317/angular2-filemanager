@@ -16,9 +16,8 @@ import {
 } from '@beezleeart/ngx-tree';
 import { Store } from '@ngrx/store';
 import { NotificationsService } from 'angular2-notifications';
-import { Observable } from 'rxjs/Observable';
 import { filter, map } from 'rxjs/operators';
-import { Subscription } from 'rxjs/Subscription';
+import { Observable, Subscription } from 'rxjs';
 
 import { FileModel } from '../filesList/file.model';
 import { IFileEvent } from '../filesList/interface/IFileEvent';

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { INodeService, IOuterNode } from '@beezleeart/ngx-tree';
 import { UUID } from 'angular2-uuid';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/throw';
