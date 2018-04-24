@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IOuterNode } from '@beezleeart/ngx-tree';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
 
@@ -28,8 +29,8 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
 
     const params = new HttpParams().set('nodeId', nodeId || '');
 
-    return this.$http.get<IOuterNode[]>(this.configuration.folderUrls.foldersUrl, { params })
-      .map((nodes: IOuterNode[]) => {
+    return this.$http.get<IOuterNode[]>(this.configuration.folderUrls.foldersUrl, { params }).pipe(
+      map((nodes: IOuterNode[]) => {
         nodes.forEach((node: IOuterNode) => {
           if (nodeIds.indexOf(node.id) === -1) {
             this.nodes.push(node);
@@ -40,7 +41,7 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
         });
 
         return nodes;
-      });
+      }));
   }
 
   /**
@@ -128,12 +129,12 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
     this.currentNodeId = nodeId;
     const params = new HttpParams().set('dirId', nodeId);
 
-    return this.$http.get<IOuterFile[]>(this.configuration.fileUrl, { params })
-      .map((files: IOuterFile[]) => {
+    return this.$http.get<IOuterFile[]>(this.configuration.fileUrl, { params }).pipe(
+      map((files: IOuterFile[]) => {
         this.files = files.map((file: IOuterFile) => <IFileDataProperties>file);
 
         return files;
-      })
+      }));
   }
 
   /**

@@ -6,4 +6,6 @@ This version of the package also uses Google's Material Design icons instead of 
 
 **New Feature**
 
-Added new Configuration to configure base for Icons URL
+* Added new Configuration to configure base for Icons URL
+* Updated ng2-translate to @ngx-translate/core to Optimize for Angular Universal
+* Changed ngx-img-cropper to ngx-image-cropper to Optimize for Angular Universal

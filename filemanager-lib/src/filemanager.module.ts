@@ -6,11 +6,12 @@ import { TreeModule } from '@beezleeart/ngx-tree';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { TranslateModule } from '@ngx-translate/core';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { NotificationsService, SimpleNotificationsModule } from 'angular2-notifications';
 import { FileUploadModule } from 'ng2-file-upload';
-import { ImageCropperComponent, ImageCropperModule } from 'ng2-img-cropper';
-import { TranslateModule } from 'ng2-translate';
+// import { ImageCropperComponent, ImageCropperModule } from 'ngx-img-cropper';
+import { ImageCropperComponent, ImageCropperModule } from 'ngx-image-cropper';
 
 import { FileManagerComponent } from './filemanager/filemanager.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';

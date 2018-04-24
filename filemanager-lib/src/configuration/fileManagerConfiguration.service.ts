@@ -18,6 +18,11 @@ export class FileManagerConfiguration {
       name: 'RI_FM_BTN_PORTRAIT',
       width: 200,
       height: 300
+    },
+    {
+      name: 'RI_FM_BTN_SQUARE',
+      width: 300,
+      height: 300
     }
   ];
 

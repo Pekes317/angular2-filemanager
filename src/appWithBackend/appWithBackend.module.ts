@@ -7,7 +7,7 @@ import { TreeModule } from '@beezleeart/ngx-tree';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { TranslateModule, TranslateService } from 'ng2-translate';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { AppWithBackendComponent } from './appWithBackend.component';
 import {
@@ -64,7 +64,8 @@ export class AppWithBackendModule {
       RI_TREE_LBL_REMOVE_NODE: 'Delete data',
       RI_TREE_LBL_DROP_ZONE: 'Drop here to move data to root level',
       RI_FM_BTN_LANDSCAPE: 'Landscape',
-      RI_FM_BTN_PORTRAIT: 'Portrait',
+      RI_FM_BTN_PORTRAIT: 'Portrait',      
+      RI_FM_BTN_SQUARE: 'Square',
       RI_FM_BTN_SAVE: 'Save',
       RI_FM_LBL_CHOOSE_SELECTION: 'Choose selection',
       RI_FM_LBL_DELETE_SELECTION: 'Delete selection',

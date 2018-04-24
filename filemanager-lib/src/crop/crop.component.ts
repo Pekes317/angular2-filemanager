@@ -2,14 +2,12 @@ import {
   Component, Input, ViewChild, ViewContainerRef, ComponentFactoryResolver, Output,
   EventEmitter, AfterContentInit
 } from '@angular/core';
-import { ImageCropperComponent } from 'ng2-img-cropper';
-import { CropperSettings } from 'ng2-img-cropper/src/cropperSettings';
-import { Bounds } from 'ng2-img-cropper/src/model/bounds';
+import { ImageCropperComponent } from 'ngx-image-cropper';
 
 import { FileModel } from '../filesList/file.model';
 import { ICropSize } from './ICropSize';
 import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
-import { ICropBounds } from './ICropBounds';
+import { ICropBounds, ICropper } from './ICropBounds';
 import { FileManagerDispatcherService } from '../store/fileManagerDispatcher.service';
 
 @Component({
@@ -47,7 +45,7 @@ export class CropComponent implements AfterContentInit {
   @ViewChild('cropper')
   public cropper: ImageCropperComponent;
 
-  private bounds: Bounds;
+  private bounds: ICropper;
 
   public cropSizeList: ICropSize[];
   public currentCropSize: ICropSize;
@@ -68,14 +66,12 @@ export class CropComponent implements AfterContentInit {
     }
 
     this.currentCropSize = cropSize;
-    cropperComponentRef.instance.settings = this.getCropperSettings();
-    cropperComponentRef.instance.image = {};
-    cropperComponentRef.instance.onCrop
-      .subscribe((bounds: Bounds) => this.bounds = bounds);
+    cropperComponentRef.instance.aspectRatio = cropSize.width / cropSize.height;
+    this.bounds = cropperComponentRef.instance.cropper;
 
     setTimeout(() => {
       image.src = this.file.url;
-      cropperComponentRef.instance.setImage(image);
+      cropperComponentRef.instance.imageBase64 = image.src;
     });
   }
 
@@ -84,30 +80,15 @@ export class CropComponent implements AfterContentInit {
   };
 
   public cropImage() {
+    console.log(this.bounds);
     let bounds: ICropBounds = {
-      x: this.bounds.left,
-      y: this.bounds.top,
-      width: this.bounds.width,
-      height: this.bounds.height
+      x: this.bounds.x1,
+      y: this.bounds.y1,
+      width: this.bounds.x2,
+      height: this.bounds.y2
     };
 
     this.fileManagerDispatcher.cropFile(this.file, bounds);
-  }
-
-
-  private getCropperSettings() {
-    let cropperSettings = new CropperSettings();
-    let scale = this.calculateScale();
-    let width = scale * this.file.getWidth();
-    let height = scale * this.file.getHeight();
-
-    cropperSettings.noFileInput = true;
-    cropperSettings.width = this.currentCropSize.width;
-    cropperSettings.height = this.currentCropSize.height;
-    cropperSettings.canvasWidth = width;
-    cropperSettings.canvasHeight = height;
-
-    return cropperSettings;
   }
 
   /**

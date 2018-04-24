@@ -100,7 +100,7 @@ export class FileManagerApiService extends AbstractFileManagerApiService impleme
   /**
    * Load files from directory
    */
-  public loadFiles(nodeId = ''): Observable<IOuterFile[]> {
+  public loadFiles(nodeId: string = ''): Observable<IOuterFile[]> {
     this.currentNodeId = nodeId;
 
     if (!this.files) {

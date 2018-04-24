@@ -45,4 +45,4 @@ demo/data/**/*
 !demo/data/.gitkeep
 ./coverage
 /.rpt2_cache/
-webpack
+dumb.js

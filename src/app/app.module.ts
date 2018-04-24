@@ -6,8 +6,8 @@ import { TreeModule } from '@beezleeart/ngx-tree';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
-import { TranslateModule, TranslateService } from 'ng2-translate';
 
 import { AppComponent } from './app.component';
 import { FileManagerModule, IFileManagerConfiguration, MaterialModule } from '../../filemanager-lib/src/public_api';
@@ -59,6 +59,7 @@ export class AppModule {
       RI_TREE_LBL_DROP_ZONE: 'Drop here to move data to root level',
       RI_FM_BTN_LANDSCAPE: 'Landscape',
       RI_FM_BTN_PORTRAIT: 'Portrait',
+      RI_FM_BTN_SQUARE: 'Square',
       RI_FM_BTN_SAVE: 'Save',
       RI_FM_LBL_CHOOSE_SELECTION: 'Choose selection',
       RI_FM_LBL_DELETE_SELECTION: 'Delete selection',
