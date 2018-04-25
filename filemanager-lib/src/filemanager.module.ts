@@ -10,7 +10,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { NotificationsService, SimpleNotificationsModule } from 'angular2-notifications';
 import { FileUploadModule } from 'ng2-file-upload';
-// import { ImageCropperComponent, ImageCropperModule } from 'ngx-img-cropper';
 import { ImageCropperComponent, ImageCropperModule } from 'ngx-image-cropper';
 
 import { FileManagerComponent } from './filemanager/filemanager.component';
