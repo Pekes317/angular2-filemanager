@@ -13,6 +13,7 @@ export class FileManagerUploader {
     filemanagerNotification: FilemanagerNotifcations) {
     const options: FileUploaderOptions = {
       allowedMimeType: configuration.mimeTypes,
+      authToken: configuration.authToken,
       url: configuration.urls.filesUrl,
       maxFileSize: configuration.maxFileSize
     };
