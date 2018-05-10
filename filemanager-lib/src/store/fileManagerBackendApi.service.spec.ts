@@ -1,5 +1,4 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Http, Response, ResponseOptions, URLSearchParams } from '@angular/http';
 import { IOuterNode } from '@beezleeart/ngx-tree';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
@@ -15,7 +14,7 @@ describe('fileManagerBackendApi.service', () => {
   let service: FileManagerBackendApiService;
   let configuration: FileManagerConfiguration;
   let handler: any;
-  let httpMock: Http | any;
+  let httpMock: HttpClient | any;
   let files: IOuterFile[];
   let subscription: Subscription;
 

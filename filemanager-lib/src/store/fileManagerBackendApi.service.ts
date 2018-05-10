@@ -53,13 +53,13 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
       parentNodeId: parentNodeId
     };
 
-    return this.$http.post<IOuterNode>(this.configuration.folderUrls.foldersUrl, data)
-      .map((newNode: IOuterNode) => {
+    return this.$http.post<IOuterNode>(this.configuration.folderUrls.foldersUrl, data).pipe(
+      map((newNode: IOuterNode) => {
         this.nodes.push(newNode);
 
         return newNode;
       })
-
+    )
   }
 
   /**
@@ -71,12 +71,14 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
 
 
     return this.$http.put<IOuterNode>(this.configuration.folderUrls.folderMoveUrl, { source: srcId, target: targetId })
-      .map((movedNode: IOuterNode) => {
-        const index = this.findIndexByNodeId(srcId);
-        this.nodes[index].parentId = targetId;
+      .pipe(
+        map((movedNode: IOuterNode) => {
+          const index = this.findIndexByNodeId(srcId);
+          this.nodes[index].parentId = targetId;
 
-        return movedNode;
-      });
+          return movedNode;
+        })
+      )
   }
 
   /**
@@ -84,13 +86,15 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
    */
   public update(node: IOuterNode): Observable<IOuterNode> {
     return this.$http.put<IOuterNode>(this.configuration.folderUrls.foldersUrl, node)
-      .map((newNode: IOuterNode) => {
-        const index = this.findIndexByNodeId(node.id);
+      .pipe(
+        map((newNode: IOuterNode) => {
+          const index = this.findIndexByNodeId(node.id);
 
-        this.nodes[index] = newNode;
+          this.nodes[index] = newNode;
 
-        return newNode;
-      });
+          return newNode;
+        })
+      )
   }
 
   /**
@@ -105,11 +109,13 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
       const params = new HttpParams().set('nodeId', nodeId);
 
       return this.$http.delete<IOuterNode>(this.configuration.folderUrls.foldersUrl, { params })
-        .map((removedNode: IOuterNode) => {
-          this.nodes.splice(index, 1);
+        .pipe(
+          map((removedNode: IOuterNode) => {
+            this.nodes.splice(index, 1);
 
-          return removedNode;
-        });
+            return removedNode;
+          })
+        )
     } else {
       return Observable.throw('Node is not empty');
     }
@@ -150,28 +156,32 @@ export class FileManagerBackendApiService extends AbstractFileManagerApiService 
     const params = new HttpParams().set('id', file.id.toString());
 
     return this.$http.delete<any>(this.configuration.fileUrl, { params })
-      .map(() => {
-        this.files.splice(index, 1);
+      .pipe(
+        map(() => {
+          this.files.splice(index, 1);
 
-        return true;
-      });
+          return true;
+        })
+      )
   }
 
   public removeSelectedFiles(selectedFiles: string[]) {
     const params = new HttpParams().set('id', selectedFiles.join('|'));
 
     return this.$http.delete<any>(this.configuration.fileUrl, { params })
-      .map(() => {
-        selectedFiles.forEach((fileId: string) => {
-          const index = this.findIndexByFileId(fileId);
+      .pipe(
+        map(() => {
+          selectedFiles.forEach((fileId: string) => {
+            const index = this.findIndexByFileId(fileId);
 
-          if (index > -1) {
-            this.files.splice(index, 1);
-          }
-        });
+            if (index > -1) {
+              this.files.splice(index, 1);
+            }
+          });
 
-        return true;
-      });
+          return true;
+        })
+      )
   }
 
   /**
