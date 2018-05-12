@@ -82,13 +82,14 @@ export class ImageDataConverter {
     image.src = data;
     image.style.display = 'none';
 
-    const loadImage = Observable.fromEvent(image, 'load')
-      .map(() => {
+    const loadImage = Observable.fromEvent(image, 'load').pipe(
+      map(() => {
         return {
           width: image.naturalWidth,
           height: image.naturalHeight
         }
-      });
+      })
+    );
 
     document.body.appendChild(image);
 

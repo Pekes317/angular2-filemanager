@@ -44,7 +44,7 @@ import { FileConfirmDialog } from './filesList/file/file-confirm.component';
   imports: [
     CommonModule,
     ConfirmationPopoverModule,
-    EffectsModule.forFeature([FileManagerEffectsService]),
+    EffectsModule,
     FormsModule,
     FileUploadModule,
     HttpClientModule,
@@ -52,7 +52,7 @@ import { FileConfirmDialog } from './filesList/file/file-confirm.component';
     MaterialModule,
     ReactiveFormsModule,
     SimpleNotificationsModule.forRoot(),
-    StoreModule.forFeature('files', fileManagerReducer),
+    StoreModule,
     StoreDevtoolsModule.instrument({}),
     TranslateModule,
     TreeModule

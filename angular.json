@@ -23,7 +23,7 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "filemanager-lib/src/styles/main.scss",
+              "projects/ngx-filemanager/src/lib/styles/main.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -74,7 +74,7 @@
             "tsConfig": "src/src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "filemanager-lib/src/styles/main.scss",
+              "projects/ngx-filemanagersrc/lib/styles/main.scss",
               "src/styles.css"
             ],
             "assets": [
@@ -120,7 +120,7 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "filemanager-lib/src/styles/main.scss",
+              "projects/ngx-filemanager/src/lib/styles/main.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -171,7 +171,7 @@
             "tsConfig": "src/src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "filemanager-lib/src/styles/main.scss",
+              "projects/ngx-filemanager/src/lib/styles/main.scss",
               "src/styles.css"
             ],
             "assets": [

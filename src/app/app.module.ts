@@ -10,7 +10,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 
 import { AppComponent } from './app.component';
-import { FileManagerModule, IFileManagerConfiguration, MaterialModule } from '../../filemanager-lib/src/public_api';
+import { FilesModule } from './files/files.module';
+import { FolderModule } from './folder/folder.module';
+import { FileManagerModule, IFileManagerConfiguration, MaterialModule } from '../../projects/ngx-filemanager/src/public_api';
 
 const fileManagerConfiguration: IFileManagerConfiguration = {
   urls: {
@@ -33,6 +35,8 @@ const fileManagerConfiguration: IFileManagerConfiguration = {
     ConfirmationPopoverModule.forRoot(),
     EffectsModule.forRoot([]),
     FileManagerModule.forRoot(fileManagerConfiguration),
+    FilesModule,
+    FolderModule,
     FormsModule,
     HttpClientModule,
     MaterialModule,

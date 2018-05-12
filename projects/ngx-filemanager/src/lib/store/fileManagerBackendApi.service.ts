@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
 
-import { ICropBounds, IFileManagerApi, IOuterFile, IFileDataProperties } from '../public_api';
+import { ICropBounds, IFileManagerApi, IOuterFile, IFileDataProperties } from '../../public_api';
 import { FileManagerConfiguration } from '../configuration/fileManagerConfiguration.service';
 import { AbstractFileManagerApiService } from './fileManagerApiAbstract.class';
 

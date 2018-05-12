@@ -10,13 +10,15 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { AppWithBackendComponent } from './appWithBackend.component';
+import { FilesModule } from './files/files.module';
+import { FolderModule } from './folder/folder.module';
 import {
   FileManagerModule,
   FileManagerApiService,
   IFileManagerConfiguration,
   FileManagerBackendApiService,
   MaterialModule
-} from '../../filemanager-lib/src/public_api';
+} from '../../projects/ngx-filemanager/src/public_api';
 
 export const fileManagerConfiguration: IFileManagerConfiguration = {
   urls: {
@@ -40,6 +42,8 @@ export const fileManagerConfiguration: IFileManagerConfiguration = {
     ConfirmationPopoverModule.forRoot(),
     EffectsModule.forRoot([]),
     FileManagerModule.forRoot(fileManagerConfiguration, { provide: FileManagerApiService, useClass: FileManagerBackendApiService }),
+    FilesModule,
+    FolderModule,
     FormsModule,
     HttpClientModule,
     MaterialModule,
