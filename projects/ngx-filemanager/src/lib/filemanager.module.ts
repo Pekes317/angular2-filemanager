@@ -51,9 +51,9 @@ import { FileConfirmDialog } from './filesList/file/file-confirm.component';
     ImageCropperModule,
     MaterialModule,
     ReactiveFormsModule,
-    SimpleNotificationsModule,
+    SimpleNotificationsModule.forRoot(),
     StoreModule,
-    StoreDevtoolsModule,
+    StoreDevtoolsModule.instrument({}),
     TranslateModule,
     TreeModule
   ],
